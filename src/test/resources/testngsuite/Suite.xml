@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Appium Demo" verbose="10" thread-count="2">
+	<test name="Appium Demo Test Cases" preserve-order="true">
+		<classes>
+			<class name="com.test.CompareProductPrice" />
+			<class name="com.test.ProductRating" />
+			<class name="com.test.SearchProduct" />
+		</classes>
+	</test>
+</suite>

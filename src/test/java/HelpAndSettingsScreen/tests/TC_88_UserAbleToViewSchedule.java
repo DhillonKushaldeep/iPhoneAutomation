@@ -1,0 +1,60 @@
+/**
+ * 
+ */
+package HelpAndSettingsScreen.tests;
+
+import org.testng.annotations.Test;
+
+import com.appium.core.BaseTest;
+import com.appium.pages.HelpAndSettingsLink;
+import com.appium.pages.LoginPage;
+import com.appium.pages.ResetDevice;
+
+/**
+ * @author kushaldeepdhillon
+ *
+ */
+public class TC_88_UserAbleToViewSchedule extends BaseTest{
+
+	@Test
+	public void UserAbleToViewSchedule()  throws InterruptedException {
+		
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.loginInApp("kushaltest", "test");
+		driver.switchTo().alert().accept();                //To give access to MicroPhone
+        Thread.sleep(2000);
+		
+		try {
+			
+		driver.switchTo().alert().accept();                //To give access to Camera
+		} catch (Exception e) {
+			
+		
+		}		
+		
+		loginPage.HelpAndSettingsLink_GearIcon();           
+		
+		HelpAndSettingsLink helpAndSettingsLink = new HelpAndSettingsLink(driver);
+		helpAndSettingsLink.clickVideoAvailability();
+		System.out.println("Click Video Availability at TOP");
+		
+		helpAndSettingsLink.verifyVideoAvailability_Language();
+		System.out.println("Language is displayed at the TOP");
+		
+		helpAndSettingsLink.verifyVideoAvailability_LanguageAlbanian();
+		System.out.println("Language Albanian is displayed at the TOP");
+		
+		helpAndSettingsLink.verifyVideoAvailability_LanguageASL();
+		System.out.println("Language ASL is displayed at the TOP");
+		
+		
+		helpAndSettingsLink.clickVideoAvailability_Close();
+		System.out.println("Click Close link at the TOP");
+			
+		ResetDevice resetDevice = new ResetDevice(driver);             //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.resetDeviceApp();
+		Thread.sleep(2000);
+
+	}
+
+}

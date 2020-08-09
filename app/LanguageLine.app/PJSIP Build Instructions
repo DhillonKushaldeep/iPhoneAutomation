@@ -1,0 +1,89 @@
+PJSIP Build Instructions
+
+
+The SIP implementation in the app utilizes PJSIP.  We are sending SIP over TLS so we utilize libreSSL for the TLS functionality.
+
+These libraries must be built for the different architectures.  The architectures are listed in the archs.txt file in the project root.
+
+The build and lipo scripts utilizes the archs.txt file.  Note: you can comment out an architecture with a # as the first character.
+
+Install/Upgrade libressl
+
+!!!!!!! IMPORTANT IMPORTANT IMPORTANT !!!!!!!!
+Note: if upgrading, keep a copy of the current as there are scripts you will need to copy from the current directories to the new source code.
+
+
+1) Download the portable version of libressl — https://github.com/libressl-portable/portable
+2) It clones as portable so rename it libressl
+3) run the autogen.sh script
+  3b) Remove the .git directories in the libressl tree
+      libressl is a git repo and you need the git configs during the autogen.sh execution.  After that has run, you no longer want them.
+      Thus, after running autogen.sh, you want to search for and remove any .git directories inside the libressl tree.
+      Currently, there is only a .git in libressl and one in libressl/openbsd, but a future release might have others.
+      Failure to remove these will cause git to treat these as submodules and cause some strange behaviors.
+4) Create a lib directory inside libressl
+5) Create a libs directory inside of libressl and copy the rename-lib.sh and lipo.sh script into it
+6) Add the build.sh script which is in the current libressl directory
+7) run build.sh
+
+You can ignore this error (non x86_64):
+ld: -dylib_file and -bitcode_bundle (Xcode setting ENABLE_BITCODE=YES) cannot be used together
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [libtls.la] Er
+make: *** [all-recursive] Error 1
+
+You can also ignore this error for (x86_64):
+Undefined symbols for architecture i386:
+"_main", referenced from:
+implicit entry/start for main executable
+ld: symbol(s) not found for architecture i386
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[2]: *** [openssl] Error 1
+make[1]: *** [all-recursive] Error 1
+make: *** [all-recursive] Error 1
+
+
+    The build script does the following:
+
+    1) builds the libraries which end up in crypto/.lib and ssl/.lib
+    2) copies the libraries to a file name including the architecture
+
+8) cd to libs and run lipo.sh
+
+    The lipo.sh script combines all of the architectures into one library file with slices.
+
+
+
+Install/Upgrade PJSIP
+
+Note: if upgrading, keep a copy of the current as their are scripts you will need to copy from there
+
+1) Download the PJSIP source
+2) Untar the source in the root of the project
+3) Add the build.sh script which is in the current pjproject directory
+4) Create libs and libs/combined folders
+5) Copy the rename-lib.sh and lipo.sh scripts from the current pjproject/libs into libs
+6) change pjlib/include/pj/config_site.h to look as follows:
+
+#define PJ_CONFIG_IPHONE 1
+#define PJ_HAS_SSL_SOCK 1
+#include <pj/config_site_sample.h>
+
+7) change this line in pjmedia/src/pjmedia/transport_srtp.c — search for ID_RTP_SAVP
+
+static const pj_str_t ID_RTP_SAVP = { "RTP/SAVP", 8 };
+
+8) run build.sh
+
+9) cd libs and run lipo.sh
+
+
+Removing CounterPath from the build:
+
+Currently CounterPath is removed from the build.  If you want to add it back, you need to add the SDK library in the list of files to link.
+
+You also need to modify CounterPath.m.  The Counter Path SDK does not support the simulator.  So, CounterPath.m has two version of its methods — one for the simulator and one for devices.  We currently are always using the Simulator versions by setting the compiler directive to true as follows.  To use CounterPath you would comment/un-comment these lines.
+
+//#if (TARGET_IPHONE_SIMULATOR)
+#if 1
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>Root</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Device ID</string>
+			<key>Key</key>
+			<string>CustomDeviceIdentifierKey</string>
+			<key>DefaultValue</key>
+			<string>Not Registered</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Disable Call Surveys</string>
+			<key>Key</key>
+			<string>DisableCallSurveyKey</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Show Device Config Within Application</string>
+			<key>Key</key>
+			<string>ShouldDisplayDeviceConfigKey</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Display Only Top Languages</string>
+			<key>Key</key>
+			<string>ShouldDisplayOnlyTopLanguagesKey</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+<!--
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Auto-hide Call Controls</string>
+			<key>Key</key>
+			<string>AutoHideControlsKey</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+-->
+	</array>
+</dict>
+</plist>

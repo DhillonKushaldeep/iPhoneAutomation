@@ -1,0 +1,1495 @@
+{
+ "customUI": [
+ {
+ "splash_screen": "/images/splash_screen.jpg"
+ },
+ {
+ "main_logo": "/images/main_logo.png"
+ },
+ {
+ "small_logo": "/images/small_logo.png"
+ }
+ ],
+ "Languages": [
+{
+ "langid": "ASL",
+ "Name": "American Sign Language",
+ "inLang": "",
+ "Favorite": "True"
+ },
+ {
+ "langid": "ACHOLI",
+ "Name": "ACHOLI",
+ "inLang": "",
+ "Favorite": "False"
+ },
+ {
+ "langid": "AFAR",
+ "Name": "AFAR",
+ "inLang": "Qafár af",
+ "Favorite": "FALSE"
+ },
+ {
+ "langid": "AFRIKAANS",
+ "Name": "AFRIKAANS",
+ "inLang": "ɐfriˈkɑːns",
+ "Favorite": "FALSE"
+ },
+ {
+ "langid": "AKAN",
+ "Name": "AKAN",
+ "inLang": "əˈkæn",
+ "Favorite": "FALSE"
+ },
+ {
+ "langid": "AKATEKO",
+ "Name": "AKATEKO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "ALBANIAN",
+ "Name": "ALBANIAN",
+ "inLang": "shqip",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "AMHARIC",
+ "Name": "AMHARIC",
+ "inLang": "አማርኛ",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "ANUAK",
+ "Name": "ANUAK",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "APACHE",
+ "Name": "APACHE",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "ARABIC",
+ "Name": "ARABIC",
+ "inLang": "العَرَبِية‎",
+ "Favorite": "TRUE"
+ },
+{
+ "langid": "ARMENIAN",
+ "Name": "ARMENIAN",
+ "inLang": "հայերէն",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "ASSYRIAN",
+ "Name": "ASSYRIAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "AZERBAIJANI",
+ "Name": "AZERBAIJANI",
+ "inLang": "آذربایجان دیلی",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "BAHASA",
+ "Name": "BAHASA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "BAHDINI",
+ "Name": "BAHDINI",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "BAHNAR",
+ "Name": "BAHNAR",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "BAMBARA",
+ "Name": "BAMBARA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "BANTU",
+ "Name": "BANTU",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "BARESE",
+ "Name": "BARESE",
+ "inLang": "baˈreːsə",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "BASQUE",
+ "Name": "BASQUE",
+ "inLang": "eus̺ˈkaɾa",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "BASSA",
+ "Name": "BASSA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "BELORUSSIAN",
+ "Name": "BELORUSSIAN",
+ "inLang": "беларуская мова",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "BEMBA",
+ "Name": "BEMBA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "BENAADIR",
+ "Name": "BENAADIR",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "BENGALI",
+ "Name": "BENGALI",
+ "inLang": "বাংলা",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "BERBER",
+ "Name": "BERBER",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "BOSNIAN",
+ "Name": "BOSNIAN",
+ "inLang": "босански",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "BULGARIAN",
+ "Name": "BULGARIAN",
+ "inLang": "български език",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "BURMESE",
+ "Name": "BURMESE",
+ "inLang": "mjəmàzà",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "CANTONESE",
+ "Name": "CANTONESE",
+ "inLang": "廣東話",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "CEBUANO",
+ "Name": "CEBUANO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "CHALDEAN",
+ "Name": "CHALDEAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "CHAMORRO",
+ "Name": "CHAMORRO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "CHAOCHOW",
+ "Name": "CHAOCHOW",
+ "inLang": "潮州话",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "CHIN FALAM",
+ "Name": "CHIN FALAM",
+ "inLang": "Laiţawng",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "CHIN HAKHA",
+ "Name": "CHIN HAKHA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "CHIN MARA",
+ "Name": "CHIN MARA",
+ "inLang": "m̥ara",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "CHIN MATU",
+ "Name": "CHIN MATU",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "CHIN SENTHANG",
+ "Name": "CHIN SENTHANG",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "CHIN TEDIM",
+ "Name": "CHIN TEDIM",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "CHIPEWYAN",
+ "Name": "CHIPEWYAN",
+ "inLang": "ᑌᓀᓱᒼᕄᓀ",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "CHUUKESE",
+ "Name": "CHUUKESE",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "CREE",
+ "Name": "CREE",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "CROATIAN",
+ "Name": "CROATIAN",
+ "inLang": "xř̩ʋaːtskiː",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "CZECH",
+ "Name": "CZECH",
+ "inLang": "čeština",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "DANISH",
+ "Name": "DANISH",
+ "inLang": "dansk",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "DARI",
+ "Name": "DARI",
+ "inLang": "دری",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "DEWOIN",
+ "Name": "DEWOIN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "DINKA",
+ "Name": "DINKA",
+ "inLang": "Thuɔŋjäŋ",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "DUALA",
+ "Name": "DUALA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "DUTCH",
+ "Name": "DUTCH",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "DZONGKHA",
+ "Name": "DZONGKHA",
+ "inLang": "རྫོང་ཁ་",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "EDO",
+ "Name": "EDO",
+ "inLang": "Ẹ̀dó",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "ESTONIAN",
+ "Name": "ESTONIAN",
+ "inLang": "eesti keel",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "EWE",
+ "Name": "EWE",
+ "inLang": "Èʋegbe",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "FARSI",
+ "Name": "FARSI",
+ "inLang": "فارسی",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "FIJIAN",
+ "Name": "FIJIAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "FIJIAN HINDI",
+ "Name": "FIJIAN HINDI",
+ "inLang": "फिजी बात",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "FINNISH",
+ "Name": "FINNISH",
+ "inLang": "suomen kieli",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "FLEMISH",
+ "Name": "FLEMISH",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "FRENCH",
+ "Name": "FRENCH",
+ "inLang": "le français",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "FRENCH CANADIAN",
+ "Name": "FRENCH CANADIAN",
+ "inLang": "Canadien(ne)s français(es)",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "FUKIENESE",
+ "Name": "FUKIENESE",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "FULANI",
+ "Name": "FULANI",
+ "inLang": "fʊˈlɑːniː",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "FUZHOU",
+ "Name": "FUZHOU",
+ "inLang": "福州話",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "GA",
+ "Name": "GA",
+ "inLang": "Gã",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "GADDANG",
+ "Name": "GADDANG",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "GAELIC-IRISH",
+ "Name": "GAELIC-IRISH",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "GAELIC-SCOTTISH",
+ "Name": "GAELIC-SCOTTISH",
+ "inLang": "Gàidhlig",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "GARRE",
+ "Name": "GARRE",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "GEN",
+ "Name": "GEN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "GEORGIAN",
+ "Name": "GEORGIAN",
+ "inLang": "ქართული",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "GERMAN",
+ "Name": "GERMAN",
+ "inLang": "Deutsch",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "GHEG",
+ "Name": "GHEG",
+ "inLang": "Gegë",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "GOKANA",
+ "Name": "GOKANA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "GREEK",
+ "Name": "GREEK",
+ "inLang": "Ελληνικά",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "GUJARATI",
+ "Name": "GUJARATI",
+ "inLang": "ગુજરાતી",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "GULAY",
+ "Name": "GULAY",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "GURANI",
+ "Name": "GURANI",
+ "inLang": "گۆرانی",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "HAITIAN CREOLE",
+ "Name": "HAITIAN CREOLE",
+ "inLang": "créole haïtien",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "HAKKA-CHINA",
+ "Name": "HAKKA-CHINA",
+ "inLang": "客家話",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "HAKKA-TAIWAN",
+ "Name": "HAKKA-TAIWAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "HASSANIYYA",
+ "Name": "HASSANIYYA",
+ "inLang": "حسانية",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "HAUSA",
+ "Name": "HAUSA",
+ "inLang": "هَرْشَن هَوْسَ",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "HEBREW",
+ "Name": "HEBREW",
+ "inLang": "עברית",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "HILIGAYNON",
+ "Name": "HILIGAYNON",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "HINDI",
+ "Name": "HINDI",
+ "inLang": "हिन्दी",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "HMONG",
+ "Name": "HMONG",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "HUNANESE",
+ "Name": "HUNANESE",
+ "inLang": "湘語",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "HUNGARIAN",
+ "Name": "HUNGARIAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "ICELANDIC",
+ "Name": "ICELANDIC",
+ "inLang": "íslenska",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "IGBO",
+ "Name": "IGBO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "ILOCANO",
+ "Name": "ILOCANO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "INDONESIAN",
+ "Name": "INDONESIAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "INUKTITUT",
+ "Name": "INUKTITUT",
+ "inLang": "ᐃᓄᒃᑎᑐᑦ",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "ITALIAN",
+ "Name": "ITALIAN",
+ "inLang": "Italiano",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "JAKARTANESE",
+ "Name": "JAKARTANESE",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "JAMAICAN PATOIS",
+ "Name": "JAMAICAN PATOIS",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "JAPANESE",
+ "Name": "JAPANESE",
+ "inLang": "日本語",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "JARAI",
+ "Name": "JARAI",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "JAVANESE",
+ "Name": "JAVANESE",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "JINGPHO",
+ "Name": "JINGPHO",
+ "inLang": "tɕiŋ˧˩pʰɔʔ˧˩",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "JINYU",
+ "Name": "JINYU",
+ "inLang": "晉語",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "JUBA ARABIC",
+ "Name": "JUBA ARABIC",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "JULA",
+ "Name": "JULA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KABA",
+ "Name": "KABA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KAMBA",
+ "Name": "KAMBA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KANJOBAL",
+ "Name": "KANJOBAL",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KANNADA",
+ "Name": "KANNADA",
+ "inLang": "ಕನ್ನಡ",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KAREN",
+ "Name": "KAREN",
+ "inLang": "kəˈrɛn",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KASHMIRI",
+ "Name": "KASHMIRI",
+ "inLang": "कॉशुर",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KAYAH",
+ "Name": "KAYAH",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KAZAKH",
+ "Name": "KAZAKH",
+ "inLang": "Қазақ тілі",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KHAM",
+ "Name": "KHAM",
+ "inLang": "खाम",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KHANA",
+ "Name": "KHANA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KHMER",
+ "Name": "KHMER",
+ "inLang": "ភាសាខ្មែរ",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KICHE",
+ "Name": "KICHE",
+ "inLang": "Quiché",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KIKUYU",
+ "Name": "KIKUYU",
+ "inLang": "Gĩkũyũ",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KIMIIRU",
+ "Name": "KIMIIRU",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KOHO",
+ "Name": "KOHO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KOREAN",
+ "Name": "KOREAN",
+ "inLang": "조선말",
+ "Favorite": "TRUE"
+ },
+{
+ "langid": "KPELLE",
+ "Name": "KPELLE",
+ "inLang": "Kpɛlɛwoo",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KRAHN",
+ "Name": "KRAHN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KRIO",
+ "Name": "KRIO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KUNAMA",
+ "Name": "KUNAMA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "KURMANJI",
+ "Name": "KURMANJI",
+ "inLang": "کورمانجی",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "LAOTIAN",
+ "Name": "LAOTIAN",
+ "inLang": "ພາສາລາວ",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "LATVIAN",
+ "Name": "LATVIAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "LIBERIAN PIDGIN ENGLISH",
+ "Name": "LIBERIAN PIDGIN ENGLISH",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "LINGALA",
+ "Name": "LINGALA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "LITHUANIAN",
+ "Name": "LITHUANIAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "LUBA-KASAI",
+ "Name": "LUBA-KASAI",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "LUGANDA",
+ "Name": "LUGANDA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "LUO",
+ "Name": "LUO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MAAY",
+ "Name": "MAAY",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MACEDONIAN",
+ "Name": "MACEDONIAN",
+ "inLang": "Македонски јазик",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MALAY",
+ "Name": "MALAY",
+ "inLang": "بهاس ملايو",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MALAYALAM",
+ "Name": "MALAYALAM",
+ "inLang": "മലയാളം",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MAM",
+ "Name": "MAM",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MANDARIN",
+ "Name": "MANDARIN",
+ "inLang": "官话",
+ "Favorite": "TRUE"
+ },
+{
+ "langid": "MANDINKA",
+ "Name": "MANDINKA",
+ "inLang": "لغة مندنكا",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MANINKA",
+ "Name": "MANINKA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MANOBO",
+ "Name": "MANOBO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MARATHI",
+ "Name": "MARATHI",
+ "inLang": "मराठी",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MARKA",
+ "Name": "MARKA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MARSHALLESE",
+ "Name": "MARSHALLESE",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MBAY",
+ "Name": "MBAY",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MIEN",
+ "Name": "MIEN",
+ "inLang": "勉語",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MIRPURI",
+ "Name": "MIRPURI",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MIXTECO",
+ "Name": "MIXTECO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MIZO",
+ "Name": "MIZO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MNONG",
+ "Name": "MNONG",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MONGOLIAN",
+ "Name": "MONGOLIAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MOROCCAN ARABIC",
+ "Name": "MOROCCAN ARABIC",
+ "inLang": "الدارجة",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "MORTLOCKESE",
+ "Name": "MORTLOCKESE",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "NAPOLETANO",
+ "Name": "NAPOLETANO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "NAVAJO",
+ "Name": "NAVAJO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "NEPALI",
+ "Name": "NEPALI",
+ "inLang": "नेपाली",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "NGAMBAY",
+ "Name": "NGAMBAY",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "NIGERIAN PIDGIN",
+ "Name": "NIGERIAN PIDGIN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "NORWEGIAN",
+ "Name": "NORWEGIAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "NUER",
+ "Name": "NUER",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "NUPE",
+ "Name": "NUPE",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "NYANJA",
+ "Name": "NYANJA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "NYORO",
+ "Name": "NYORO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "OJIBWAY",
+ "Name": "OJIBWAY",
+ "inLang": "ᐊᓂᔑᓈᐯᒧᐎᓐ",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "OROMO",
+ "Name": "OROMO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "PALAUAN",
+ "Name": "PALAUAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "PAMPANGAN",
+ "Name": "PAMPANGAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "PAPIAMENTO",
+ "Name": "PAPIAMENTO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "PASHTO",
+ "Name": "PASHTO",
+ "inLang": "پښتو",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "PLAUTDIETSCH",
+ "Name": "PLAUTDIETSCH",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "POHNPEIAN",
+ "Name": "POHNPEIAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "POLISH",
+ "Name": "POLISH",
+ "inLang": "polski",
+ "Favorite": "TRUE"
+ },
+{
+ "langid": "PORTUGUESE",
+ "Name": "PORTUGUESE",
+ "inLang": "português",
+ "Favorite": "TRUE"
+ },
+{
+ "langid": "PORTUGUESE BRAZILIAN",
+ "Name": "PORTUGUESE BRAZILIAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "PORTUGUESE CAPE VERDEAN",
+ "Name": "PORTUGUESE CAPE VERDEAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "PUGLIESE",
+ "Name": "PUGLIESE",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "PULAAR",
+ "Name": "PULAAR",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "PUNJABI",
+ "Name": "PUNJABI",
+ "inLang": "ਪੰਜਾਬੀ",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "QUECHUA",
+ "Name": "QUECHUA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "QUICHUA",
+ "Name": "QUICHUA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "RADE",
+ "Name": "RADE",
+ "inLang": "klei Êđê",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "RAKHINE",
+ "Name": "RAKHINE",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "ROHINGYA",
+ "Name": "ROHINGYA",
+ "inLang": "Ruáingga",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "ROMANIAN",
+ "Name": "ROMANIAN",
+ "inLang": "limba română",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "RUNDI",
+ "Name": "RUNDI",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "RUSSIAN",
+ "Name": "RUSSIAN",
+ "inLang": "ру́сский",
+ "Favorite": "TRUE"
+ },
+{
+ "langid": "RWANDA",
+ "Name": "RWANDA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SAMOAN",
+ "Name": "SAMOAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SANGO",
+ "Name": "SANGO",
+ "inLang": "yângâ tî sängö",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SERAIKI",
+ "Name": "SERAIKI",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SERBIAN",
+ "Name": "SERBIAN",
+ "inLang": "српски",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SHANGHAINESE",
+ "Name": "SHANGHAINESE",
+ "inLang": "上海话",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SICHUAN YI",
+ "Name": "SICHUAN YI",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SICILIAN",
+ "Name": "SICILIAN",
+ "inLang": "lingua siciliana",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SINHALA",
+ "Name": "SINHALA",
+ "inLang": "සිංහල",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SLOVAK",
+ "Name": "SLOVAK",
+ "inLang": "slovenčina",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SLOVENE",
+ "Name": "SLOVENE",
+ "inLang": "slovenščina",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SOGA",
+ "Name": "SOGA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SOMALI",
+ "Name": "SOMALI",
+ "inLang": "اف سومالى‎‎",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SONINKE",
+ "Name": "SONINKE",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SORANI",
+ "Name": "SORANI",
+ "inLang": "سۆرانی",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SPANISH",
+ "Name": "SPANISH",
+ "inLang": "español",
+ "Favorite": "TRUE"
+ },
+{
+ "langid": "SUDANESE ARABIC",
+ "Name": "SUDANESE ARABIC",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SUNDA",
+ "Name": "SUNDA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SUSU",
+ "Name": "SUSU",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SWAHILI",
+ "Name": "SWAHILI",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SWEDISH",
+ "Name": "SWEDISH",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "SYLHETTI",
+ "Name": "SYLHETTI",
+ "inLang": "ছিলটী",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "TAGALOG",
+ "Name": "TAGALOG",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "TAIWANESE",
+ "Name": "TAIWANESE",
+ "inLang": "臺灣話",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "TAJIK",
+ "Name": "TAJIK",
+ "inLang": "тоҷикӣ",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "TAMIL",
+ "Name": "TAMIL",
+ "inLang": "தமிழ்",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "TELUGU",
+ "Name": "TELUGU",
+ "inLang": "తెలుగు",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "TEST",
+ "Name": "TEST",
+ "inLang": "TEST",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "THAI",
+ "Name": "THAI",
+ "inLang": "ภาษาไทย",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "TIBETAN",
+ "Name": "TIBETAN",
+ "inLang": "ལྷ་སའི་སྐད་" ,
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "TIGRE",
+ "Name": "TIGRE",
+ "inLang": "ትግራይት",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "TIGRIGNA",
+ "Name": "TIGRIGNA",
+ "inLang": "ትግርኛ",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "TOISHANESE",
+ "Name": "TOISHANESE",
+ "inLang": "台山话",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "TONGAN",
+ "Name": "TONGAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "TOORO",
+ "Name": "TOORO",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "TRAINING",
+ "Name": "TRAINING",
+ "inLang": "TRAINING",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "TURKISH",
+ "Name": "TURKISH",
+ "inLang": "Türkçe",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "TURKMEN",
+ "Name": "TURKMEN",
+ "inLang": "تورکمنچه",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "TZOTZIL",
+ "Name": "TZOTZIL",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "UKRANIAN",
+ "Name": "UKRANIAN",
+ "inLang": "українська",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "URDU",
+ "Name": "URDU",
+ "inLang": "اُردُو",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "UYGHUR",
+ "Name": "UYGHUR",
+ "inLang": "ئۇيغۇر تىلى",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "UZBEK",
+ "Name": "UZBEK",
+ "inLang": "Oʻzbekcha",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "VIETNAMESE",
+ "Name": "VIETNAMESE",
+ "inLang": "Việt",
+ "Favorite": "TRUE"
+ },
+{
+ "langid": "VISAYAN",
+ "Name": "VISAYAN",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "WELSH",
+ "Name": "WELSH",
+ "inLang": "kəmˈrɑːɨɡ",
+ "Favorite": "FALSE"
+ }, 
+{
+ "langid": "WODAABE",
+ "Name": "WODAABE",
+ "inLang": "",
+ "Favorite": "FALSE"
+ }, 
+{
+ "langid": "WOLOF",
+ "Name": "WOLOF",
+ "inLang": "ˈwɒlɒf",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "WOZHOU",
+ "Name": "WOZHOU",
+ "inLang": "梧州",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "YIDDISH",
+ "Name": "YIDDISH",
+ "inLang": "יידיש",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "YORUBA",
+ "Name": "YORUBA",
+ "inLang": "ˈjɒrʊbə",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "YUNNANESE",
+ "Name": "YUNNANESE",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "ZAPOTEK",
+ "Name": "ZAPOTEK",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "ZARMA",
+ "Name": "ZARMA",
+ "inLang": "",
+ "Favorite": "FALSE"
+ },
+{
+ "langid": "ZYPHE",
+ "Name": "ZYPHE",
+ "inLang": "",
+ "Favorite": "FALSE"
+ }
+ ],
+ "DisplayPrompts": [
+ {
+ "Question": "Please may I have your First Name",
+ "Type": "Optional",
+ "Min": "1",
+ "Max": "60",
+ "Values": ""
+ },
+ {
+ "Question": "Please may I have your Department Name",
+ "Type": "DropDown",
+ "Min": "1",
+ "Max": "60",
+ "Values": "EMERGENCY|RADIOLOGY"
+ }
+ ]
+}

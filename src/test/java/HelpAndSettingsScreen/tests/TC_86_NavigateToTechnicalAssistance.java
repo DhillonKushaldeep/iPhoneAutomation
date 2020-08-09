@@ -1,0 +1,53 @@
+/**
+ * 
+ */
+package HelpAndSettingsScreen.tests;
+
+import org.testng.annotations.Test;
+
+import com.appium.core.BaseTest;
+import com.appium.pages.HelpAndSettingsLink;
+import com.appium.pages.LoginPage;
+import com.appium.pages.ResetDevice;
+
+/**
+ * @author kushaldeepdhillon
+ *
+ */
+public class TC_86_NavigateToTechnicalAssistance extends BaseTest{
+
+	@Test
+	public void NavigateToTechnicalAssistance()  throws InterruptedException {
+		
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.loginInApp("kushaltest", "test");
+		driver.switchTo().alert().accept();                //To give access to MicroPhone
+        Thread.sleep(2000);
+		
+		try {
+			
+		driver.switchTo().alert().accept();                //To give access to Camera
+		} catch (Exception e) {
+			
+		
+		}		
+		
+		loginPage.HelpAndSettingsLink_GearIcon();           //click technical Assistance , click close , u land on device login page
+		
+		HelpAndSettingsLink helpAndSettingsLink = new HelpAndSettingsLink(driver);
+		helpAndSettingsLink.ClickTechnicalAssistance();
+		System.out.println("Technical Assistance page is displayed. After clicking on it, verify the text for the First Question: How do I access LanguageLine InSight Video Interpreting® services?");
+		
+		helpAndSettingsLink.verifyTechnicalAssistanceFAQ();
+		System.out.println("FAQ is displayed at the TOP");
+		
+		helpAndSettingsLink.clickCloseAtTOP();
+		System.out.println("Click Close link at the TOP");
+			
+		ResetDevice resetDevice = new ResetDevice(driver);             //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.resetDeviceApp();
+		Thread.sleep(2000);
+
+	}
+
+}
