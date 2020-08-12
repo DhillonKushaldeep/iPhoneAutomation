@@ -35,7 +35,8 @@ public class LoginPage extends BasePage {
 		waitForElementPresent(AuthCode.toBy());		
 		setText( By.xpath("//XCUIElementTypeTextField[@name=\"activationCode\"]"), userName);
 		setText(DeviceName.toBy(), password);
-		click(ActivateDevice.toBy());				
+		click(ActivateDevice.toBy());	
+		
 	}
 	
     public void verifyLoginInfoPresent() throws InterruptedException{
@@ -171,6 +172,7 @@ public class LoginPage extends BasePage {
     	
 	    waitForElementPresent(errorMessageEnterDeviceName.toBy());		    
 		Thread.sleep(1000);
+		System.out.println("");
 					
 	}
 	

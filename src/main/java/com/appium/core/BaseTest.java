@@ -9,8 +9,14 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import java.io.File;
 import java.lang.reflect.Method;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -65,6 +71,12 @@ public class BaseTest {
 	@BeforeSuite
     public void setupReport(){
         extent = new ExtentReports("target/surefire-reports/ExtentReport.html", true);
+        
+       
+        extent.addSystemInfo("Simulator", "iPhone 8");
+        extent.addSystemInfo("Username", "Kushaldeep Dhillon");
+        extent.addSystemInfo("Manager", "Julia Berke");
+        extent.addSystemInfo("Company", "LanguageLine Solutions");
     }
     
         
@@ -217,7 +229,7 @@ public class BaseTest {
 			capabilities.setCapability("app", getIOSAbsoultePath());
 			break;
 		default:
-			throw new Exception("Please provide valied driver option either Android or iOS ");
+			throw new Exception("Please provide valid driver option either Android or iOS ");
 
 		}
 		return capabilities;
@@ -248,21 +260,51 @@ public class BaseTest {
 		driver.resetApp();
 	}
 	
+	//This method is to capture the screenshot and return the path of the screenshot.
+			public static String getScreenhot(WebDriver driver, String screenshotName) throws Exception {
+			String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+			TakesScreenshot ts = (TakesScreenshot) driver;
+			File source = ts.getScreenshotAs(OutputType.FILE);
+			                //after execution, you could see a folder "FailedTestsScreenshots" under src folder
+			String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/"+screenshotName+dateName+".png";
+			File finalDestination = new File(destination);
+			FileUtils.copyFile(source, finalDestination);
+			return destination;
+			}
 	    
     @AfterMethod
-    public void tearDownMethod(ITestResult result){
+    public void tearDownMethod(ITestResult result) throws Exception{
+    	
+    	if (result.getStatus() == ITestResult.SUCCESS) {
+            test.log(LogStatus.PASS, "Test case Passed is:  " + result.getName() + " . It has been executed successfully" );
+    	}
         
-        if (result.getStatus() == ITestResult.FAILURE) {
-            test.log(LogStatus.FAIL, result.getThrowable() );
+    	else if (result.getStatus() == ITestResult.FAILURE) {
+        	test.log(LogStatus.FAIL, "Failed Test Case is:  " + result.getName());
+            test.log(LogStatus.FAIL, "Failed Test Case showing error as:  " + result.getThrowable());
+            
+            //To capture SCREENSHOT path and store the path of the screenshot in the string screenshotPath
+            //We do pass the path captured by this method in to the extent reports using "test.addScreenCapture" method.
+           
+            //String screenshotPath = ExtentReportsClass.getScreenshot(driver, result.getName());
+            String screenshotPath = BaseTest.getScreenhot(driver, result.getName());
+            
+            //To add it in the Extent Report
+            test.log(LogStatus.FAIL, test.addScreenCapture(screenshotPath));
+      
+        
+        
+        }else if
+        (result.getStatus() == ITestResult.SKIP) {
+            test.log(LogStatus.SKIP, "Test case Skipped is:  " + result.getName() + " TC Skipped" );
         }
         
-        if (result.getStatus() == ITestResult.SUCCESS) {
-            test.log(LogStatus.PASS, "Test method " + result.getName() + " execution successfully" );
-        }
+        
         extent.endTest(test);
     }
     
-    @AfterSuite
+
+	@AfterSuite
     public void tearDownSuite(){
         extent.flush();
         extent.close();

@@ -12,40 +12,7 @@ import org.apache.commons.lang3.StringUtils;
 
 public class FileReader {
 	
-/*static String path = getFilePath();
-    
-    public static String readConfig(String key) throws Exception {
-        String value = "";        
-        try {
-            Properties prop = new Properties();
-            File f = new File(path + "/Authentication.properties");
-            if (f.exists()) {
-                prop.load(new FileInputStream(f));
-                value = prop.getProperty(key);
-                System.out.println("value "+value);
-            }
-            else{
-                throw new Exception("File not found");
-            }
-        } catch (FileNotFoundException ex) {
-            System.out.println("Failed to read from application.properties file.");
-            throw ex;
-        }
-        if(value == null)
-            throw new Exception("Key not found in properties file");
-        return value;
-    }
 
-    public static String getFilePath() {
-        String filepath = "";
-        File file = new File("");
-        String absolutePathOfFirstFile = file.getAbsolutePath();
-        filepath = absolutePathOfFirstFile.replaceAll("\\\\+", "/");
-        return filepath;
-    }
-	
-	
-}*/
 
 	private static final String configFile = "Config.properties";
 
