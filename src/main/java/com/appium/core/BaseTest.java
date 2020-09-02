@@ -67,16 +67,15 @@ public class BaseTest {
 	
 
 	
-	
 	@BeforeSuite
-    public void setupReport(){
-        extent = new ExtentReports("target/surefire-reports/ExtentReport.html", true);
+    public void setupReport() throws Exception{
+		
+		//extent = new ExtentReports("target/surefire-reports/ExtentReport.html", true); //to get SINGLE Extent Report based on TIME
+        extent = new ExtentReports("target/surefire-reports/ExtentReport.html" + FileReader.getTimeStamp()+ ".html", true); //to get MULTIPLE Extent Reports based on TIME
         
-       
-        extent.addSystemInfo("Simulator", "iPhone 8");
-        extent.addSystemInfo("Username", "Kushaldeep Dhillon");
-        extent.addSystemInfo("Manager", "Julia Berke");
-        extent.addSystemInfo("Company", "LanguageLine Solutions");
+        extent.addSystemInfo("Manager",   "Julia Berke");
+        extent.addSystemInfo("Company",   "LanguageLine Solutions");
+        extent.addSystemInfo("Simulator",  FileReader.readData("IDeviceName"));
     }
     
         
@@ -85,7 +84,7 @@ public class BaseTest {
         test = extent.startTest(method.getName(), this.getClass().getName());
         test.assignAuthor("Kushaldeep Dhillon");
         test.assignCategory(this.getClass().getSimpleName());
-        System.out.println("Test");        
+        System.out.println("Test Starting on Device");        
     }
     
 	@BeforeClass
@@ -262,11 +261,11 @@ public class BaseTest {
 	
 	//This method is to capture the screenshot and return the path of the screenshot.
 			public static String getScreenhot(WebDriver driver, String screenshotName) throws Exception {
-			String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+			String dateName = new SimpleDateFormat("dd-MMMM-yyyy hh-mm-ss").format(new Date());
 			TakesScreenshot ts = (TakesScreenshot) driver;
 			File source = ts.getScreenshotAs(OutputType.FILE);
 			                //after execution, you could see a folder "FailedTestsScreenshots" under src folder
-			String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/"+screenshotName+dateName+".png";
+			String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/"+screenshotName + dateName+".png";
 			File finalDestination = new File(destination);
 			FileUtils.copyFile(source, finalDestination);
 			return destination;

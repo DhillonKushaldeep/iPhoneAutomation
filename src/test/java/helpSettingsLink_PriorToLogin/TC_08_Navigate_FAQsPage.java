@@ -13,7 +13,7 @@ import com.appium.pages.ResetDevice;
  * @author KushaldeepDhillon
  *
  */
-public class TC_08_Navigate_TechnicalAssistancePage extends BaseTest{
+public class TC_08_Navigate_FAQsPage extends BaseTest{
 
 	@Test
 	public void NavigateTo_TechnicalAssistancePage()  throws InterruptedException {
@@ -22,14 +22,19 @@ public class TC_08_Navigate_TechnicalAssistancePage extends BaseTest{
 		loginPage.HelpAndSettingsLink_GearIcon();
 		
 		Thread.sleep(1000);
-		loginPage.verifyTechnicalAssistance();
-		System.out.println("Technical Assistance is displayed");
+		loginPage.verifyFreqAskedQues();      //Frequently asked questions
 		Thread.sleep(1000);
-		loginPage.TechnicalAssistance_click();
+		loginPage.clickFreqAskedQuestions();   //click on Frequently asked questions
 		Thread.sleep(2000);
-		System.out.println("Technical Assistance page is displayed with Questions");
+		loginPage.verifyHeader_FAQ();            //FAQ
+		loginPage.clickCloseAtTOP();    //CLOSE at TOP
+		
+		
 		Thread.sleep(1000);
-		System.out.println("Authetication Page is displayed");
+		loginPage.clickBack();
+		
+		loginPage.verifyAuthenticateYourDevicePresent();     //Authenticate your Device
+		
 
 	}
 

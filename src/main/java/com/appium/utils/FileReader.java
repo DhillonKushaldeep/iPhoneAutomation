@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.sql.Timestamp;
 import java.util.Properties;
 
 import org.apache.commons.lang3.StringUtils;
@@ -42,4 +43,18 @@ public class FileReader {
 		return value;
 	}
 
+
+
+
+
+public static long getTimeStamp() {
+	
+	Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+	return timestamp.getTime();
+	
 }
+
+}
+
+
+

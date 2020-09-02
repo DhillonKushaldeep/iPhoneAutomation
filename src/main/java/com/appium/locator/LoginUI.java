@@ -1,9 +1,13 @@
 package com.appium.locator;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public enum LoginUI implements ILocator {
 		
+	
+	AuthYourDevice(By.xpath("//XCUIElementTypeStaticText[@name=\"Authenticate Your Device\"]")),
 	AuthCode(By.xpath("//XCUIElementTypeTextField[@name=\"activationCode\"]")),
 	DeviceName(By.xpath("//XCUIElementTypeTextField[@name=\"deviceName\"]")),
 	ActivateDevice(By.xpath("//XCUIElementTypeButton[@name=\"activateDevice\"]")),
@@ -24,9 +28,21 @@ public enum LoginUI implements ILocator {
 	TestMode_ON(By.xpath("//XCUIElementTypeSwitch[@name=\"testModeSwitch\"]")),
 	BackButton(By.xpath("//XCUIElementTypeOther[@name=\"backButtonContainer\"]")),
 	
-	TechnicalAssistance(By.xpath("//XCUIElementTypeOther[@name=\"technicalAssistanceContainer\"]")),
+	TechnicalAssistance(By.xpath("//XCUIElementTypeOther[@name=\"technicalAssistanceContainer\"]")),   //No more exists
+	
+	
+	
+	FreqAskedQuestions(By.xpath("//XCUIElementTypeOther[@name=\"technicalAssistanceContainer\"]")), //Frequently Asked Questions
+	ContactUs(By.xpath("//XCUIElementTypeOther[@name=\"assistanceContainer\"]")),                    //Contact Us
+	
+	//once we click on FAQ link, next page opens up. "FAQ" and "Contact us" on the top of the page
+	FAQ(By.xpath("//XCUIElementTypeStaticText[@name=\"FAQ\"]")),
+	ContactUsHeaderAtTOP(By.xpath("//XCUIElementTypeStaticText[@name=\"Contact Us\"]")),
+
+	
 	GetAssistance(By.xpath("//XCUIElementTypeOther[@name=\"assistanceContainer\"]")),
-	VersionNumber(By.xpath("//XCUIElementTypeStaticText[@name=\"1.7.0 (148)\"]")),
+	VersionNumber(By.xpath("//XCUIElementTypeButton[@name=\"2.0 (229)\"]")),
+	                        
 	
 	TechnicalAssistanceFirstQues(By.xpath("//XCUIElementTypeStaticText[@name=\"How do I access LanguageLine InSight Video Interpreting® services?\"]")),
 	GetAssistanceFirstQues(By.xpath("//XCUIElementTypeStaticText[@name=\"How Do I Contact LanguageLine?\"]")),
@@ -34,7 +50,7 @@ public enum LoginUI implements ILocator {
 	
 	
 	HelpAndSettingsLink_GearIcon(By.xpath("//XCUIElementTypeOther[@name=\"helpAndSettingsContainer\"]")),
-	CloseAtTOP(By.xpath("//XCUIElementTypeStaticText[@name=\"webviewCloseButton\"]"));
+	CloseAtTOP(By.xpath("//XCUIElementTypeButton[@name=\"webviewCloseButton\"]"));
 
 	private final By locator;
 
@@ -46,5 +62,9 @@ public enum LoginUI implements ILocator {
 	public By toBy() {
 		return locator;
 	}
+	
+	//@FindBy(id = "Authenticate Your Device")
+	//private WebElement AuthYourDevice;
+	
 
 }

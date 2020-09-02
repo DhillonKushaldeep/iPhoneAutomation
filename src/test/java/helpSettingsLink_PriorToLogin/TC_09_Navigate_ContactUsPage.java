@@ -13,23 +13,21 @@ import com.appium.pages.ResetDevice;
  * @author KushaldeepDhillon
  *
  */
-public class TC_07_Navigate_HelpSettingsPage extends BaseTest{
+public class TC_09_Navigate_ContactUsPage extends BaseTest{
 
 	@Test
-	public void NavigateTo_HelpSettingsPage()  throws InterruptedException {
+	public void Navigate_ContactUsPage()  throws InterruptedException {
 		
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.HelpAndSettingsLink_GearIcon();
 		
 		Thread.sleep(1000);
-		loginPage.verifyFreqAskedQues();      //Frequently asked questions
+		loginPage.clickContactUs();
+		loginPage.verifyHeader_ContactUs();
 		
-		Thread.sleep(1000);
-		loginPage.verifyContactUs();          //Contact us
+        loginPage.clickCloseAtTOP();    //CLOSE at TOP
 		
-		Thread.sleep(1000);
-		loginPage.verifyVersion();           //Version number
-			
+		
 		Thread.sleep(1000);
 		loginPage.clickBack();
 		
