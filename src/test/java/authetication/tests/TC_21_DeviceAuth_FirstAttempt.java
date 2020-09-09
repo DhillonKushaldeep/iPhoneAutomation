@@ -6,6 +6,7 @@ package authetication.tests;
 import org.testng.annotations.Test;
 
 import com.appium.core.BaseTest;
+import com.appium.pages.LanguageScreen;
 import com.appium.pages.LoginPage;
 import com.appium.pages.ResetDevice;
 
@@ -31,9 +32,17 @@ public class TC_21_DeviceAuth_FirstAttempt extends BaseTest{
 		
 		}			
 				
-		ResetDevice resetDevice = new ResetDevice(driver); //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		//To RESET the DEVICE
+		LanguageScreen languageScreen = new LanguageScreen(driver);
+	    Thread.sleep(2000);
+	    languageScreen.click_HelpSettingsGEAR();   //click on the Help & Settings Gear icon on TOP
+	    
+	    
+		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
+;
 		
 	}
 

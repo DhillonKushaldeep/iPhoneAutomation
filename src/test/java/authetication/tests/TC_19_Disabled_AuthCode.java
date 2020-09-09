@@ -37,7 +37,7 @@ public class TC_19_Disabled_AuthCode extends BaseTest{
 		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("activationError");
 		
 		String message = element.getText();
-		String SucessMessage = "The authentication code is invalid";	                   
+		String SucessMessage = "Authentication code is disabled";	                   
 						 
 	    assertEquals(message, SucessMessage);					
 		Thread.sleep(5000);	

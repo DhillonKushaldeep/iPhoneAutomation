@@ -22,7 +22,7 @@ public class TC_20_Max_AuthCode_LimitReached extends BaseTest{
 	public void Max_AuthCode_LimitReached()  throws InterruptedException {
 		
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.loginInApp("ABCDE54321", "test");	
+		loginPage.loginInApp("8311234567", "test");	
 		driver.switchTo().alert().accept();                   //To give access to MicroPhone
         Thread.sleep(2000);
 		
@@ -37,7 +37,7 @@ public class TC_20_Max_AuthCode_LimitReached extends BaseTest{
 		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("activationError");
 		
 		String message = element.getText();
-		String SucessMessage = "Max activation limit has been reached for this authetication code";	                   
+		String SucessMessage = "Max activation limit has been reached for this authentication code";	                   
 						 
 	    assertEquals(message, SucessMessage);					
 		Thread.sleep(5000);	

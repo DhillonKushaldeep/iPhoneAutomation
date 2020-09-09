@@ -13,7 +13,9 @@ public enum HoldScreen_AudioUI implements ILocator {
 	AudioCallMuteButtonOff(By.xpath("//XCUIElementTypeStaticText[@name=\"audioCallMuteButtonOff\"]")),
 	
 	
-	AudioCallHangupButton(By.xpath("//XCUIElementTypeOther[@name=\"audioCallHangupButton\"]")),
+	AudioCallCancelButton(By.xpath("//XCUIElementTypeStaticText[@name=\"Cancel Call\"]")),
+	
+	
 	
 	LabelAuthorizing(By.xpath("//XCUIElementTypeStaticText[@name=\"Authorizing...\"]")),
 	LabelInitializing(By.xpath("//XCUIElementTypeStaticText[@name=\"Initializing...\"]")),

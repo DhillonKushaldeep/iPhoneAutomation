@@ -2,9 +2,6 @@ package com.appium.pages;
 
 import static com.appium.locator.LoginUI.*;
 import static com.appium.locator.ResetDeviceUI.ResetDeviceActivation_RESET;
-import static com.appium.locator.ResetDeviceUI.ResetDeviceButton;
-import static com.appium.locator.ResetDeviceUI.SettingsSymbol_AtTOP;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -27,7 +24,7 @@ public class LoginPage extends BasePage {
 	}
 
     
-    public void verifyAuthenticateYourDevicePresent() throws InterruptedException {
+    public void verifyAuthenticateYourDevicePresent() throws InterruptedException {     //Method added on 9/02/2020
        	
     	waitForElementPresent(AuthYourDevice.toBy());
     	Thread.sleep(2000);
@@ -53,6 +50,22 @@ public class LoginPage extends BasePage {
 		
 	}
 	
+    public void loginInAppAgain(String userName, String password) throws InterruptedException{
+		
+		waitForElementPresent(AuthCode.toBy());
+		//click(HelpAndSettingsLink_GearIcon.toBy());
+		//Thread.sleep(1000);
+		//click(TestMode_ON.toBy());
+		//Thread.sleep(1000);
+		//click(BackButton.toBy());
+		
+		waitForElementPresent(AuthCode.toBy());		
+		setText( By.xpath("//XCUIElementTypeTextField[@name=\"activationCode\"]"), userName);
+		setText(DeviceName.toBy(), password);
+		click(ActivateDevice.toBy());	
+		
+	}
+
     public void verifyLoginInfoPresent() throws InterruptedException{
 		
 		waitForElementPresent(AuthCode.toBy());
@@ -93,7 +106,7 @@ public class LoginPage extends BasePage {
 					
 	//}
     
-  public void clickFreqAskedQuestions() throws InterruptedException{		//Frequently Asked Questions
+  public void clickFreqAskedQuestions() throws InterruptedException{		//Frequently Asked Questions   Prior to Login - 09/02/2020
 	 	
   	    click(FreqAskedQuestions.toBy());
 		Thread.sleep(1000);
@@ -101,7 +114,7 @@ public class LoginPage extends BasePage {
 	
 	}
 
-  public void verifyFreqAskedQues() throws InterruptedException{        // created on 9/1/2020
+  public void verifyFreqAskedQues() throws InterruptedException{        // created on 9/1/2020  Prior to Login - 09/02/2020
 		
     	waitForElementPresent(FreqAskedQuestions.toBy());		    
 		Thread.sleep(1000);
@@ -110,7 +123,7 @@ public class LoginPage extends BasePage {
 	}
   
   public void verifyHeader_FAQ() throws InterruptedException{ //After we click on link - Frequently Asked Questions, it take to next page. 
-	                                                          //Verify header "FAQ" on TOP
+	                                                          //Verify header "FAQ" on TOP   Prior to Login - 09/02/2020
 	 	
 	    click(FAQ.toBy());
 		Thread.sleep(1000);
@@ -118,7 +131,7 @@ public class LoginPage extends BasePage {
 	
 	}
  
-  public void verifyContactUs() throws InterruptedException{           // created on 9/1/2020
+  public void verifyContactUs() throws InterruptedException{           // created on 9/1/2020    Prior to Login - 09/02/2020
 		
  	waitForElementPresent(ContactUs.toBy());		    
 		Thread.sleep(1000);
@@ -126,7 +139,7 @@ public class LoginPage extends BasePage {
 					
 	}
   
-  public void clickContactUs() throws InterruptedException{		//created on 9/1/2020
+  public void clickContactUs() throws InterruptedException{		//created on 9/1/2020     Prior to Login - 09/02/2020
 	 	
 	    click(ContactUs.toBy());
 		Thread.sleep(1000);
@@ -135,7 +148,7 @@ public class LoginPage extends BasePage {
 	}
   
   public void verifyHeader_ContactUs() throws InterruptedException{ //After we click on link - ContactUs, it take to next page. 
-	                                                                   //Verify header "ContactUs" on TOP
+	                                                                   //Verify header "ContactUs" on TOP    Prior to Login - 09/02/2020
 	 	
 	    click(ContactUsHeaderAtTOP.toBy());
 		Thread.sleep(1000);
@@ -220,7 +233,7 @@ public class LoginPage extends BasePage {
     public void errorMessage_InvalidAuthCode() throws InterruptedException{
     	
 	    waitForElementPresent(errorMessageInvalidAuthCode.toBy());	
-	    System.out.println("The authentication code is invalid");
+	    System.out.println("Authentication code is disabled");
 		Thread.sleep(1000);
 					
 	}
@@ -228,7 +241,7 @@ public class LoginPage extends BasePage {
     public void errorMessage_MaxActivationLimit() throws InterruptedException{
     	
 	    waitForElementPresent(errorMessageMaxActivationLimit.toBy());	
-	    System.out.println("The authentication code is invalid");
+	    System.out.println("Max activation limit has been reached for this authentication code");
 		Thread.sleep(1000);
 					
 	}

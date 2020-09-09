@@ -12,13 +12,15 @@ import org.openqa.selenium.By;
 
 	public enum ResetDeviceUI implements ILocator {
 		
-		SettingsSymbol_AtTOP(By.xpath("//XCUIElementTypeStaticText[@name=\"helpAndSettings\"]")),
+		//SettingsSymbol_AtTOP(By.xpath("//XCUIElementTypeStaticText[@name=\"helpAndSettings\"]")),
+		HelpSettingsGEAR(By.xpath("//XCUIElementTypeButton[@name=\"helpAndSettings\"]")),
 		
-		DeviceLoginLink(By.xpath("//XCUIElementTypeOther[@name=\"deviceLoginContainer\"]")),
-		ResetDeviceButton(By.xpath("//XCUIElementTypeButton[@name=\"resetDevice\"]")),
+		DeviceConfigLink(By.xpath("//XCUIElementTypeOther[@name=\"deviceLoginContainer\"]")),
+		ChangeCode(By.xpath("//XCUIElementTypeStaticText[@name=\"Change Code\"]\n")),
+		ChangeName(By.xpath("//XCUIElementTypeStaticText[@name=\"Change Name\"]\n")),
 		
-		ResetDeviceActivation_RESET(By.xpath("//XCUIElementTypeButton[@name=\"Reset\"]")),
-		ResetDeviceActivation_CANCEL(By.xpath("//XCUIElementTypeButton[@name=\"Cancel\"]")),
+		ResetDeviceActivation_RESET(By.xpath("//XCUIElementTypeButton[@name=\"Reset\"]")),  
+		ResetDeviceActivation_CANCEL(By.xpath("//XCUIElementTypeButton[@name=\"Cancel\"]")),  
 		
 		ResetDevice_Julia_iPhone(By.xpath("//XCUIElementTypeButton[@name=\"Reset\"]"));
 

@@ -38,7 +38,7 @@ public class TC_15_ValidAuthCode_NoDeviceName extends BaseTest{
 		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("deviceNameError");
 		
 		String message = element.getText();
-		String SucessMessage = " enter a device name";	                   
+		String SucessMessage = "Please enter a device name";	                   
 						 
 	    assertEquals(message, SucessMessage);					
 		Thread.sleep(5000);

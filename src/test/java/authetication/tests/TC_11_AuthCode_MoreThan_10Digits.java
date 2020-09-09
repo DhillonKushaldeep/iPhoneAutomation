@@ -34,9 +34,12 @@ public class TC_11_AuthCode_MoreThan_10Digits extends BaseTest{
 		
 		}			
 				
-		ResetDevice resetDevice = new ResetDevice(driver); //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		
+		ResetDevice resetDevice = new ResetDevice(driver); //Device Login --> Change Code --> Reset/Cancel --> Reset 
+		resetDevice.settingSymbolAtTop_click();
 		resetDevice.resetDeviceApp();
-		Thread.sleep(2000);
+		//resetDevice.resetDevice_changeCode();
+		//resetDevice.resetDevice_clickReset();
 		
 	
 		

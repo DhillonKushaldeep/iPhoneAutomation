@@ -37,7 +37,7 @@ public class TC_13_AutheticationCode_LessMinimumLength extends BaseTest{
 		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("activationError");
 		
 		String message = element.getText();
-		String SucessMessage = "Your code is not complete.  Please\ndouble check it.";	                   
+		String SucessMessage = "The authentication code is invalid.";	                   
 						 
 	    assertEquals(message, SucessMessage);					
 		Thread.sleep(5000);	

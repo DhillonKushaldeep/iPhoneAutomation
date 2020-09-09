@@ -3,6 +3,7 @@
  */
 package holdScreen.tests;
 
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.appium.core.BaseTest;
@@ -10,6 +11,8 @@ import com.appium.pages.HoldScreen_Audio;
 import com.appium.pages.LanguageScreen;
 import com.appium.pages.LoginPage;
 import com.appium.pages.ResetDevice;
+
+import io.appium.java_client.MobileBy;
 
 /**
  * @author KushaldeepDhillon
@@ -36,27 +39,24 @@ public class TC_42_ChoseAudioINT_CancelCallBeforeConnecting extends BaseTest{
 		LanguageScreen languageScreen = new LanguageScreen(driver);
 		languageScreen.verify_TopLanguages();
 	    Thread.sleep(2000);
+	    languageScreen.click_SpanishLanguage();   
 	    
-	   
+	    WebElement el = driver.findElement(MobileBy.AccessibilityId("selectedAudioLanguage")); //clicking on the AUDIO TILE
+	    el.click();
 	    
-	    languageScreen.click_SpanishLanguage();     
-	    languageScreen.click_AudioLanguageTileSplit();
-	    
-	   
 	    HoldScreen_Audio holdScreen_Audio = new HoldScreen_Audio(driver);
 	    Thread.sleep(2000);
-	    holdScreen_Audio.click_AudioCallHangup();
-	    System.out.println("Audio Call Hangup Button is displayed and is clicked to Hangup the call");
+	    holdScreen_Audio.click_AudioCancelCall();
+	    System.out.println("Cancel Call Button is displayed and is clicked to end the call");
 	    
 	    
-	    
-	    
-	    
-	  
+	    //To RESET the DEVICE
 	    Thread.sleep(2000);
+	    languageScreen.click_HelpSettingsGEAR();  //click on the Help & Settings Gear icon on TOP
 	    
 	    
 		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 

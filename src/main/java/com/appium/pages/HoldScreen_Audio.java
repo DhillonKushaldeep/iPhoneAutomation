@@ -12,11 +12,11 @@ public class HoldScreen_Audio extends BasePage {
 	
    
 		
-    public void click_AudioCallHangup() throws InterruptedException{	
+    public void click_AudioCancelCall() throws InterruptedException{	
     	
-    	 waitForElementPresent(AudioCallHangupButton.toBy());
+    	 waitForElementPresent(AudioCallCancelButton.toBy());
     	 Thread.sleep(1000);
-    	click(AudioCallHangupButton.toBy());
+    	click(AudioCallCancelButton.toBy());
 		Thread.sleep(1000);
 	
 	}

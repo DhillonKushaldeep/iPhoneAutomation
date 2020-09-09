@@ -38,7 +38,7 @@ public class TC_16_Invalid_AuthCode extends BaseTest{
 		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("activationError");
 		
 		String message = element.getText();
-		String SucessMessage = "Your code is not complete.  Please\ndouble check it.";	                   
+		String SucessMessage = "The authentication code is invalid.";	                   
 						 
 	    assertEquals(message, SucessMessage);					
 		Thread.sleep(5000);	

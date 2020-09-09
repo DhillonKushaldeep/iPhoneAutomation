@@ -14,11 +14,7 @@ public class ResetDevice extends BasePage {
 	
     public void resetDeviceApp() throws InterruptedException{
 		
-		click(SettingsSymbol_AtTOP.toBy());
-		Thread.sleep(1000);
-		click(DeviceLoginLink.toBy());
-		Thread.sleep(1000);
-		click(ResetDeviceButton.toBy());
+		click(ChangeCode.toBy());
 		Thread.sleep(1000);
 		click(ResetDeviceActivation_RESET.toBy());
 		Thread.sleep(1000);
@@ -28,36 +24,37 @@ public class ResetDevice extends BasePage {
     
    public void DeviceLoginresetDeviceApp() throws InterruptedException{   //
 		
-		click(DeviceLoginLink.toBy());
-		Thread.sleep(1000);
-		click(ResetDeviceButton.toBy());
-		Thread.sleep(1000);
-		click(ResetDeviceActivation_RESET.toBy());
+		click(DeviceConfigLink.toBy());
 		Thread.sleep(1000);
 		
 	}
 
     public void settingSymbolAtTop_click() throws InterruptedException{		
 		
-    	click(SettingsSymbol_AtTOP.toBy());
+    	click(HelpSettingsGEAR.toBy());
 		Thread.sleep(1000);
-		click(DeviceLoginLink.toBy());
+		click(DeviceConfigLink.toBy());
+		Thread.sleep(1000);
+		
+	}
+    
+   public void resetDevice_changeCode() throws InterruptedException{		
+		
+		click(ChangeCode.toBy());
 		Thread.sleep(1000);
 		
 	}
     
    public void resetDevice_clickReset() throws InterruptedException{		
 		
-		click(ResetDeviceButton.toBy());
-		Thread.sleep(1000);
 		click(ResetDeviceActivation_RESET.toBy());
 		Thread.sleep(1000);
 		
 	}
    
-   public void resetDevice_clickCancel() throws InterruptedException{		//
+   public void resetDevice_clickCancel() throws InterruptedException{	
 		
-		click(ResetDeviceButton.toBy());
+		click(DeviceConfigLink.toBy());
 		Thread.sleep(1000);
 		click(ResetDeviceActivation_CANCEL.toBy());
 		Thread.sleep(1000);

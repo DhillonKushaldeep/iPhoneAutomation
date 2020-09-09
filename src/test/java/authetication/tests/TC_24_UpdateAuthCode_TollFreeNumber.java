@@ -37,6 +37,8 @@ public class TC_24_UpdateAuthCode_TollFreeNumber extends BaseTest{
 	    Thread.sleep(2000);
 				
 		ResetDevice resetDevice = new ResetDevice(driver); //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.settingSymbolAtTop_click();
+		Thread.sleep(2000);
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 		

@@ -38,13 +38,19 @@ public class LanguageScreen extends BasePage {
 	
 	}
     
+    public void click_HelpSettingsGEAR() throws InterruptedException{		
+		
+    	click(HelpSettingsGEAR.toBy());
+		Thread.sleep(1000);
+	
+	}
+    
     public void click_AllLanguages() throws InterruptedException{		
 		
     	click(AllLanguages.toBy());
 		Thread.sleep(1000);
 	
 	}
-    
    
     public void click_AudioLanguageTileSplit() throws InterruptedException{		//
 		

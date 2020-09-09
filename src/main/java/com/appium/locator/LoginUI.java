@@ -22,26 +22,26 @@ public enum LoginUI implements ILocator {
 	
 	errorMessageEnterDeviceName(By.xpath("//XCUIElementTypeStaticText[@name=\"deviceNameError\"]")),
 	
-    //  "LanguageLine LOGO" on Main page displayed
+    //  "LanguageLine LOGO" on Main page displayed    9/02/2020
 	Logo_BeforeLogin(By.xpath("//XCUIElementTypeImage[@name=\"logoForIphone\"]")),
 	
 	TestMode_ON(By.xpath("//XCUIElementTypeSwitch[@name=\"testModeSwitch\"]")),
 	BackButton(By.xpath("//XCUIElementTypeOther[@name=\"backButtonContainer\"]")),
 	
-	TechnicalAssistance(By.xpath("//XCUIElementTypeOther[@name=\"technicalAssistanceContainer\"]")),   //No more exists
+	TechnicalAssistance(By.xpath("//XCUIElementTypeOther[@name=\"technicalAssistanceContainer\"]")),   //No more exists   9/02/2020
 	
 	
 	
-	FreqAskedQuestions(By.xpath("//XCUIElementTypeOther[@name=\"technicalAssistanceContainer\"]")), //Frequently Asked Questions
-	ContactUs(By.xpath("//XCUIElementTypeOther[@name=\"assistanceContainer\"]")),                    //Contact Us
+	FreqAskedQuestions(By.xpath("//XCUIElementTypeOther[@name=\"technicalAssistanceContainer\"]")), //Frequently Asked Questions    9/02/2020
+	ContactUs(By.xpath("//XCUIElementTypeOther[@name=\"assistanceContainer\"]")),                    //Contact Us                   9/02/2020
 	
 	//once we click on FAQ link, next page opens up. "FAQ" and "Contact us" on the top of the page
-	FAQ(By.xpath("//XCUIElementTypeStaticText[@name=\"FAQ\"]")),
-	ContactUsHeaderAtTOP(By.xpath("//XCUIElementTypeStaticText[@name=\"Contact Us\"]")),
+	FAQ(By.xpath("//XCUIElementTypeStaticText[@name=\"FAQ\"]")),                             //9/02/2020
+	ContactUsHeaderAtTOP(By.xpath("//XCUIElementTypeStaticText[@name=\"Contact Us\"]")),     //9/02/2020
 
 	
 	GetAssistance(By.xpath("//XCUIElementTypeOther[@name=\"assistanceContainer\"]")),
-	VersionNumber(By.xpath("//XCUIElementTypeButton[@name=\"2.0 (229)\"]")),
+	VersionNumber(By.xpath("//XCUIElementTypeButton[@name=\"2.0 (229)\"]")),             //JIRA Raised    9/02/2020
 	                        
 	
 	TechnicalAssistanceFirstQues(By.xpath("//XCUIElementTypeStaticText[@name=\"How do I access LanguageLine InSight Video Interpreting® services?\"]")),
@@ -50,7 +50,7 @@ public enum LoginUI implements ILocator {
 	
 	
 	HelpAndSettingsLink_GearIcon(By.xpath("//XCUIElementTypeOther[@name=\"helpAndSettingsContainer\"]")),
-	CloseAtTOP(By.xpath("//XCUIElementTypeButton[@name=\"webviewCloseButton\"]"));
+	CloseAtTOP(By.xpath("//XCUIElementTypeButton[@name=\"webviewCloseButton\"]"));       //Updated      9/02/2020
 
 	private final By locator;
 
@@ -63,8 +63,8 @@ public enum LoginUI implements ILocator {
 		return locator;
 	}
 	
-	//@FindBy(id = "Authenticate Your Device")
-	//private WebElement AuthYourDevice;
+	@FindBy()
+	private WebElement AuthID;
 	
 
 }

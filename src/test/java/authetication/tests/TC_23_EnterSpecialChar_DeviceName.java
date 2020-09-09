@@ -4,7 +4,6 @@
 package authetication.tests;
 
 import static com.appium.locator.ResetDeviceUI.ResetDeviceActivation_RESET;
-import static com.appium.locator.ResetDeviceUI.ResetDeviceButton;
 
 import org.testng.annotations.Test;
 
@@ -40,13 +39,12 @@ public class TC_23_EnterSpecialChar_DeviceName extends BaseTest{
 		Thread.sleep(2000);
 		
         MobileElement element = (MobileElement) driver.findElementByAccessibilityId("lastActivated");
-		
 		String message = element.getText();
 		System.out.println(message);					
 		Thread.sleep(5000);
 		
 		ResetDevice resetDevice1 = new ResetDevice(driver); //Reset Device --> Reset/Cancel --> Reset 
-		resetDevice1.resetDevice_clickReset();
+		resetDevice1.resetDeviceApp();
 		Thread.sleep(2000);
 
 	}

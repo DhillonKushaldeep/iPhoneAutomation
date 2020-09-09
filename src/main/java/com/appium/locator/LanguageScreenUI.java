@@ -1,6 +1,10 @@
 package com.appium.locator;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import io.appium.java_client.MobileBy;
 
 public enum LanguageScreenUI implements ILocator {
 	
@@ -8,13 +12,15 @@ public enum LanguageScreenUI implements ILocator {
 	TopLanguages(By.xpath("//XCUIElementTypeStaticText[@name=\"Top Languages\"]")),
 	AllLanguages(By.xpath("//XCUIElementTypeStaticText[@name=\"All Languages\"]")),
 	
+	HelpSettingsGEAR(By.xpath("//XCUIElementTypeButton[@name=\"helpAndSettings\"]")),
+	
 	
 	AudioLanguageTileSplit(By.id("selectedAudioLanguage")),  
-	VideoLanguageTileSplit(By.id("selectedVideoLanguage")),  
+	VideoLanguageTileSplit(By.id("selectedVideoLanguage")), 
 	
+	//AccessibilityID
 	
-	
-	
+	//driver.findElement(By.AccessibilityId(AccessibilityId value));
 	
 	//XCUIElementTypeApplication[@name="LanguageLine"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell[1]/XCUIElementTypeOther
 	
@@ -85,5 +91,21 @@ public enum LanguageScreenUI implements ILocator {
 	public By toBy() {
 		return locator;
 	}
+	
+	
+	
+	//  WebElement el = driver.findElementByAccessibilityId(MobileBy.AccessibilityId("foo"));
+	  
+	  //public void clickDialogBox_Reset() { el.click(); }
+	 
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
