@@ -37,8 +37,19 @@ public class TC_33_LanguagesDisplayed_BasedOnIndex extends BaseTest{
 			languageScreen.click_AllLanguages();
 			Thread.sleep(2000);
 			languageScreen.click_alpahbetS();                  // Tap on alphabet "S" in the Section Index and checks the languages that start with alphabet S in the language screen
-					
-			ResetDevice resetDevice = new ResetDevice(driver); //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+			
+			
+			 
+			
+			
+			
+			//To RESET the DEVICE
+		    Thread.sleep(2000);
+		    languageScreen.click_HelpSettingsGEAR();  //click on the Help & Settings Gear icon on TOP
+		    
+		    
+			ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+			resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 			resetDevice.resetDeviceApp();
 			Thread.sleep(2000);
 

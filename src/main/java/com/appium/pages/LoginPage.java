@@ -167,10 +167,15 @@ public class LoginPage extends BasePage {
 		
    	    waitForElementPresent(VersionNumber.toBy());		    
 		Thread.sleep(1000);
-		System.out.println("Version number is displayed"); 
+		System.out.println("Version Number is displayed\n");
+		
+		VersionNumber.getText();
+		
 					
 	}
    
+   
+
    public void clickCloseAtTOP() throws InterruptedException{		//At Top
 	 	
   	    click(CloseAtTOP.toBy());

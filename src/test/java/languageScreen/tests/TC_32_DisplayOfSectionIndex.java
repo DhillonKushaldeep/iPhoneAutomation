@@ -38,7 +38,13 @@ public class TC_32_DisplayOfSectionIndex extends BaseTest{
 		Thread.sleep(2000);
 		languageScreen.verify_SectionIndexDisplayed();    //verify Section Index is displayed in language screen under "All Languages"
 				
-		ResetDevice resetDevice = new ResetDevice(driver); //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		//To RESET the DEVICE
+	    Thread.sleep(2000);
+	    languageScreen.click_HelpSettingsGEAR();  //click on the Help & Settings Gear icon on TOP
+	    
+	    
+		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 

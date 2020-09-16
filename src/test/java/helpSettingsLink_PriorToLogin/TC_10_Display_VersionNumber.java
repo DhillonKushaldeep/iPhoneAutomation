@@ -22,7 +22,6 @@ public class TC_10_Display_VersionNumber extends BaseTest{
 		
 		Thread.sleep(1000);
 		loginPage.verifyVersion();       //JIRA raised to update the locator
-		System.out.println("Version Number is displayed");
 		Thread.sleep(1000);
 	
 

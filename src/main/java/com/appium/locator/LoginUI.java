@@ -41,7 +41,9 @@ public enum LoginUI implements ILocator {
 
 	
 	GetAssistance(By.xpath("//XCUIElementTypeOther[@name=\"assistanceContainer\"]")),
-	VersionNumber(By.xpath("//XCUIElementTypeButton[@name=\"2.0 (229)\"]")),             //JIRA Raised    9/02/2020
+	VersionNumber(By.xpath("//XCUIElementTypeButton[@name=\"versionNumber\"]")),             //9/14/2020
+	
+	
 	                        
 	
 	TechnicalAssistanceFirstQues(By.xpath("//XCUIElementTypeStaticText[@name=\"How do I access LanguageLine InSight Video Interpreting® services?\"]")),
@@ -63,8 +65,20 @@ public enum LoginUI implements ILocator {
 		return locator;
 	}
 	
-	@FindBy()
-	private WebElement AuthID;
+	//@FindBy()
+	//private WebElement AuthID;
+	
+	
+
+	public String getText() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 	
 
 }
+
+
+
+

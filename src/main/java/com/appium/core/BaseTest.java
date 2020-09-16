@@ -70,8 +70,8 @@ public class BaseTest {
 	@BeforeSuite
     public void setupReport() throws Exception{
 		
-		//extent = new ExtentReports("target/surefire-reports/ExtentReport.html", true); //to get SINGLE Extent Report based on TIME
-        extent = new ExtentReports("target/surefire-reports/ExtentReport.html" + FileReader.getTimeStamp()+ ".html", true); //to get MULTIPLE Extent Reports based on TIME
+		extent = new ExtentReports("target/surefire-reports/ExtentReport.html", true); //to get SINGLE Extent Report based on TIME
+        //extent = new ExtentReports("target/surefire-reports/ExtentReport.html" + FileReader.getTimeStamp()+ ".html", true); //to get MULTIPLE Extent Reports based on TIME
         
         extent.addSystemInfo("Manager",   "Julia Berke");
         extent.addSystemInfo("Company",   "LanguageLine Solutions");

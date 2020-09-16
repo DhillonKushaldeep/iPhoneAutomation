@@ -33,28 +33,33 @@ public enum LanguageScreenUI implements ILocator {
 	SectionIndex(By.xpath("//XCUIElementTypeApplication[@name=\"LanguageLine\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther[6]/XCUIElementTypeOther]")),
 	
 	
-	Alphabet_S_Displayed(By.xpath("//XCUIElementTypeStaticText[@name=\"alphaIndexS\"]")),
-	SamoanLanguage(By.xpath("//XCUIElementTypeCell[@name=\"Samoan\"]")),
-	SangoLanguage(By.xpath("//XCUIElementTypeCell[@name=\"Sango\"]")),
-	SeraikiLanguage(By.xpath("//XCUIElementTypeCell[@name=\"Seraiki\"]")),
-	VietnameseLanguage(By.xpath("//XCUIElementTypeCell[@name=\"Vietnamese\"]")),
+	Alphabet_S_Displayed(By.xpath("//XCUIElementTypeButton[@name=\"alphaIndexS\"]")),                               
+	SamoanLanguage(By.xpath("//XCUIElementTypeCell[@name=\"Samoan\"]")),  
+	SangoLanguage(By.xpath("XCUIElementTypeCell[@name=\"Sango\"]")),
+	SeraikiLanguage(By.xpath("XCUIElementTypeCell[@name=\"Seraiki\"]")),
+	
+	
+	LanguageListBasedOnIndex(By.xpath("//XCUIElementTypeApplication[@name=\"InSight\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[6]/XCUIElementTypeCollectionView/XCUIElementTypeCell")),   
+	
+	
+	VietnameseLanguage(By.xpath("XCUIElementTypeStaticText[@name=\"Vietnamese\"]")),
 	VietnameseSectionIUndex(By.xpath("//XCUIElementTypeStaticText[@name=\"alphaIndexV\"]")),
 	
 	
-	Alphabet_F_Displayed(By.xpath("//XCUIElementTypeStaticText[@name=\"alphaIndexF\"]")),
-	FrenchLanguage(By.xpath("//XCUIElementTypeCell[@name=\"French\"]")),
-	GermanLanguage(By.xpath("//XCUIElementTypeCell[@name=\"German\"]")),
+	Alphabet_F_Displayed(By.xpath("//XCUIElementTypeButton[@name=\"alphaIndexF\"]")),
+	FrenchLanguage(By.xpath("XCUIElementTypeStaticText[@name=\"French\"]")),
+	GermanLanguage(By.xpath("XCUIElementTypeStaticText[@name=\"German\"]")),
 	
 	
-	SearchLanguages(By.xpath("//XCUIElementTypeSearchField[@name=\"Search Languages\"]")),
-	SpanishBySearch(By.xpath("//XCUIElementTypeCell[@name=\"Spanish\"]")),
-	Punjabi(By.xpath("//XCUIElementTypeCell[@name=\"Punjabi\"]")),
-	AmericanSignLanguage(By.xpath("//XCUIElementTypeCell[@name=\"American Sign Language\"]")),
-	Portuguese(By.xpath("//XCUIElementTypeCell[@name=\"Portuguese\"]")),
-	Cantonese(By.xpath("//XCUIElementTypeCell[@name=\"Cantonese\"]")),
-	Chaochow(By.xpath("//XCUIElementTypeCell[@name=\"Chaochow\"]")),
+	SearchLanguages(By.xpath("//XCUIElementTypeSearchField[@name=\"Search by Language or Country\"]")),
+	SpanishBySearch(By.xpath("XCUIElementTypeStaticText[@name=\"Spanish\"]")),
+	Punjabi(By.xpath("XCUIElementTypeStaticText[@name=\"Punjabi\"]")),
+	AmericanSignLanguage(By.xpath("//XCUIElementTypeStaticText[@name=\"American Sign Language\"]")),
+	Portuguese(By.xpath("XCUIElementTypeStaticText[@name=\"Portuguese\"]")),
+	Cantonese(By.xpath("//XCUIElementTypeStaticText[@name=\"Cantonese\"]")),
+	Chaochow(By.xpath("//XCUIElementTypeStaticText[@name=\"Chaochow\"]")),
 	
-	Acholi(By.xpath("//XCUIElementTypeCell[@name=\"Acholi\"]")),
+	Acholi(By.xpath("//XCUIElementTypeStaticText[@name=\"Acholi\"]")),
 	
 	
 	//*******************************************************When we Click on ASL, next page opens up on top of it with its schedule     BEGIN **************************************************************************//

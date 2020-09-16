@@ -4,9 +4,12 @@ import static com.appium.locator.LanguageScreenUI.*;
 import static com.appium.locator.LoginUI.*;
 import static com.appium.locator.LoginUI.HelpAndSettingsLink_GearIcon;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import com.appium.core.BasePage;
 import io.appium.java_client.AppiumDriver;
@@ -42,6 +45,7 @@ public class LanguageScreen extends BasePage {
 		
     	click(HelpSettingsGEAR.toBy());
 		Thread.sleep(1000);
+		System.out.println("Help and Settings GEAR");
 	
 	}
     
@@ -49,6 +53,7 @@ public class LanguageScreen extends BasePage {
 		
     	click(AllLanguages.toBy());
 		Thread.sleep(1000);
+		System.out.println("All languages");
 	
 	}
    
@@ -56,6 +61,7 @@ public class LanguageScreen extends BasePage {
 		
     	click(AudioLanguageTileSplit.toBy());
 		Thread.sleep(1000);
+		System.out.println("Audio Language Tile Split");
 	
 	}
 
@@ -63,6 +69,7 @@ public class LanguageScreen extends BasePage {
 	
 	   click(VideoLanguageTileSplit.toBy());
 	   Thread.sleep(1000);
+	   System.out.println("Video Language Tile Split");
 
    }
     
@@ -70,6 +77,7 @@ public class LanguageScreen extends BasePage {
 		
     	waitForElementPresent(SearchLanguages.toBy());
 		Thread.sleep(1000);
+		System.out.println("Search Languages");
 		
 	}
     
@@ -77,6 +85,7 @@ public class LanguageScreen extends BasePage {
 		
     	click(SearchLanguages.toBy());
 		Thread.sleep(2000);	
+		System.out.println("Search Languages displayed");
 		setText(SearchLanguages.toBy(), text);
 	}
     
@@ -226,18 +235,54 @@ public class LanguageScreen extends BasePage {
  	}
   
   
+     //Method to Get the list of languages THAT start with "S" when we click on letter "S"
+    //Samoan  Sango  Seraiki  Serbian  Shanghainese  Shona  Sichuan Yi  Sicilian Sinhala
+     
     public void click_alpahbetS() throws InterruptedException{		
 		
     	click(Alphabet_S_Displayed.toBy());              //click on Alpabet S
 		Thread.sleep(1000);
-		waitForElementPresent(SamoanLanguage.toBy());    //Samoan language is displayed
-		Thread.sleep(1000);
-		waitForElementPresent(SangoLanguage.toBy());     //Sango language is displayed
-		Thread.sleep(1000);
-		waitForElementPresent(SeraikiLanguage.toBy());    //Seraiki language is displayed
-		Thread.sleep(1000);
+		System.out.println("Alphabet S displayed and clicked");
 		
-	}
+		List<WebElement> elements =   driver.findElements(LanguageListBasedOnIndex.toBy());
+		
+         for(WebElement element : elements ){                
+             System.out.println(element.getAttribute("name"));
+             Assert.assertTrue(element.getAttribute("name").startsWith("S"));
+        
+     }
+				
+ }
+    
+    
+    
+    
+    
+		public void verify_Samoan_LanguageDisplayed() throws InterruptedException{	
+				
+				waitForElementPresent(SamoanLanguage.toBy());
+				Thread.sleep(1000);
+				System.out.println("Samoan Language displayed");
+			}
+		
+		
+		public void verify_Sango_LanguageDisplayed() throws InterruptedException{		
+			
+			waitForElementPresent(SangoLanguage.toBy());
+			Thread.sleep(1000);
+			System.out.println("Sango Language displayed");
+		}
+		
+		
+		public void verify_Seraiki_LanguageDisplayed() throws InterruptedException{		
+			
+			waitForElementPresent(SeraikiLanguage.toBy());
+			Thread.sleep(1000);
+			System.out.println("Seraiki Language displayed");
+		}
+    
+    
+    
  
     public void click_HelpAndSettingsLink_GearIcon() throws InterruptedException{		
 		
