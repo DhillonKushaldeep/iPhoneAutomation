@@ -100,6 +100,7 @@ public class LanguageScreen extends BasePage {
 		
     	waitForElementPresent(AlertMessage_NoLanguagesMatchYourSearch.toBy());
 		Thread.sleep(1000);
+		System.out.println("No languages match your search. Please double check your entry.");
 		
 	}
     
@@ -255,6 +256,26 @@ public class LanguageScreen extends BasePage {
  }
     
     
+	    //Method to Get the list of languages THAT shows up after searching in search box "SPA" or "CHINA"
+	    // "SPA" -->    Basque, Catalan, Spanish
+       // "CHINA" -->   Cantonese  Chaochow Fukienese Fuzhou Hakka-china Hmong Hunanese Jinyu Kyrgyz
+       // "SWI"  -->    French  German
+       // "DUET"  -->   German
+	     
+	    public void searchFor_LanguagesTypedInSearchBox() throws InterruptedException{		
+			
+	    	waitForElementPresent(LanguageListBasedOnSearch.toBy());              //search for SPA, CHINA
+			Thread.sleep(1000);
+			System.out.println("LETTERS typed in Search Box");
+			
+			List<WebElement> elements =   driver.findElements(LanguageListBasedOnSearch.toBy());
+			
+	         for(WebElement element : elements ){                
+	             System.out.println(element.getAttribute("name"));        
+	        
+	     }
+					
+	 }
     
     
     

@@ -39,10 +39,6 @@ public class TC_33_LanguagesDisplayed_BasedOnIndex extends BaseTest{
 			languageScreen.click_alpahbetS();                  // Tap on alphabet "S" in the Section Index and checks the languages that start with alphabet S in the language screen
 			
 			
-			 
-			
-			
-			
 			//To RESET the DEVICE
 		    Thread.sleep(2000);
 		    languageScreen.click_HelpSettingsGEAR();  //click on the Help & Settings Gear icon on TOP

@@ -38,10 +38,16 @@ public class TC_34_AbleToTypeIn_SearchLanguage extends BaseTest{
 	    Thread.sleep(2000);
 	    languageScreen.click_searchLanguages("SPA");
 	    Thread.sleep(2000);
-	    languageScreen.verify_SpanishLanguageDisplayed();    //verify that Spanish language is diapyed in dropdown when we enter SPA in search box    
+	    languageScreen.searchFor_LanguagesTypedInSearchBox();    //verify that Spanish language is displayed in dropdown when we enter SPA in search box    
 	    Thread.sleep(2000);
 	    
+	    //To RESET the DEVICE
+	    Thread.sleep(2000);
+	    languageScreen.click_HelpSettingsGEAR();  //click on the Help & Settings Gear icon on TOP
+	    
+	    
 		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 		

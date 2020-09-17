@@ -46,13 +46,18 @@ public class TC_40_AlertMessage_NoLanguageMatchYourSearch extends BaseTest {
 		    
 		    MobileElement element = (MobileElement) driver.findElementByAccessibilityId("noSearchResults");
 		    String message = element.getText();
-			String SucessMessage = "No languages match your search. Please double check your entry.\n" + 
-					"";	                   
+			String SucessMessage = "No languages match your search. Please double check your entry.";	                   
 							 
 		    assertEquals(message, SucessMessage);					
 			Thread.sleep(5000);	
 					
-			ResetDevice resetDevice = new ResetDevice(driver);               //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+			//To RESET the DEVICE
+		    Thread.sleep(2000);
+		    languageScreen.click_HelpSettingsGEAR();  //click on the Help & Settings Gear icon on TOP
+		    
+		    
+			ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+			resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 			resetDevice.resetDeviceApp();
 			Thread.sleep(2000);
 

@@ -18,18 +18,6 @@ public enum LanguageScreenUI implements ILocator {
 	AudioLanguageTileSplit(By.id("selectedAudioLanguage")),  
 	VideoLanguageTileSplit(By.id("selectedVideoLanguage")), 
 	
-	//AccessibilityID
-	
-	//driver.findElement(By.AccessibilityId(AccessibilityId value));
-	
-	//XCUIElementTypeApplication[@name="LanguageLine"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell[1]/XCUIElementTypeOther
-	
-	//XCUIElementTypeApplication[@name="LanguageLine"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell[1]/XCUIElementTypeOther  Audio
-	//XCUIElementTypeApplication[@name="LanguageLine"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell[2]/XCUIElementTypeOther  Audio
-	//XCUIElementTypeApplication[@name="LanguageLine"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell[3]/XCUIElementTypeOther  Audio
-	//XCUIElementTypeApplication[@name="LanguageLine"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell[4]/XCUIElementTypeOther  Audio
-	//XCUIElementTypeApplication[@name="LanguageLine"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell[8]/XCUIElementTypeOther  Video
-	
 	SectionIndex(By.xpath("//XCUIElementTypeApplication[@name=\"LanguageLine\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther[6]/XCUIElementTypeOther]")),
 	
 	
@@ -40,7 +28,7 @@ public enum LanguageScreenUI implements ILocator {
 	
 	
 	LanguageListBasedOnIndex(By.xpath("//XCUIElementTypeApplication[@name=\"InSight\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[6]/XCUIElementTypeCollectionView/XCUIElementTypeCell")),   
-	
+	LanguageListBasedOnSearch(By.xpath("//XCUIElementTypeApplication[@name=\"InSight\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[6]/XCUIElementTypeCollectionView/XCUIElementTypeCell")),
 	
 	VietnameseLanguage(By.xpath("XCUIElementTypeStaticText[@name=\"Vietnamese\"]")),
 	VietnameseSectionIUndex(By.xpath("//XCUIElementTypeStaticText[@name=\"alphaIndexV\"]")),
@@ -52,7 +40,8 @@ public enum LanguageScreenUI implements ILocator {
 	
 	
 	SearchLanguages(By.xpath("//XCUIElementTypeSearchField[@name=\"Search by Language or Country\"]")),
-	SpanishBySearch(By.xpath("XCUIElementTypeStaticText[@name=\"Spanish\"]")),
+	SpanishBySearch(By.xpath("//XCUIElementTypeStaticText[@name=\"Spanish\"]")),  
+
 	Punjabi(By.xpath("XCUIElementTypeStaticText[@name=\"Punjabi\"]")),
 	AmericanSignLanguage(By.xpath("//XCUIElementTypeStaticText[@name=\"American Sign Language\"]")),
 	Portuguese(By.xpath("XCUIElementTypeStaticText[@name=\"Portuguese\"]")),
@@ -66,7 +55,7 @@ public enum LanguageScreenUI implements ILocator {
 	
 	ASL_VideoLanguage(By.xpath("//XCUIElementTypeStaticText[@name=\"American Sign Language Video Schedule\"]")),     //Page that opens up when we click on ASL language --> View Video Availability
 	ShowAllLanguagesLinkBelow(By.xpath("//XCUIElementTypeSearchField[@name=\"Search Languages\"]")),                 //Show All Languages Link present below the schedule
-	CloseAtTop(By.xpath("//XCUIElementTypeOther[@name=\"InterpreterAvailabilityClose\"]")),                          //Close displayed at the Top
+	CloseAtTop(By.xpath("//XCUIElementTypeOther[@name=\"InterpreterAvailabilityClose\"]")),                          //Close displayed at the Top                                                                                                                                                   
 	
 	//*******************************************************When we Click on ASL, next page opens up on top of it with its schedule     END **************************************************************************//
 	
@@ -75,8 +64,11 @@ public enum LanguageScreenUI implements ILocator {
 	
 	
 	
-	AlertMessage_NoLanguagesMatchYourSearch(By.xpath("//XCUIElementTypeStaticText[@value=\"No languages match your search. Please double check your entry.\n" + 
-			"\"]")),
+	//AlertMessage_NoLanguagesMatchYourSearch(By.xpath("XCUIElementTypeStaticText[@name=\"noSearchResults\"]")),
+	
+	AlertMessage_NoLanguagesMatchYourSearch(By.xpath("//XCUIElementTypeApplication[@name=\"InSight\"]/XCUIElementTypeWindow[1]"
+			+ "/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[6]/XCUIElementTypeStaticText")),	
+	
 	
 	GearIconAtTOP(By.xpath("//XCUIElementTypeStaticText[@name=\"helpAndSettings\"]")),
 	HelpAndSettingsLink_GearIcon(By.xpath("//XCUIElementTypeOther[@name=\"helpAndSettingsContainer\"]"));

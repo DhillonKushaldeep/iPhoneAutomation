@@ -38,13 +38,19 @@ public class TC_38_SearchLanguage_Capital_NonCapitalLetters extends BaseTest {
 	    Thread.sleep(2000);
 	    languageScreen.click_searchLanguages("SPANISH");
 	    Thread.sleep(2000);
-	    languageScreen.verify_SpanishLanguageDisplayed();    //verify that SPANISH language is displayed in dropdown when we enter SPANISH in search box    
+	    languageScreen.searchFor_LanguagesTypedInSearchBox();    //verify that SPANISH language is displayed in dropdown when we enter SPANISH in search box    
 	    Thread.sleep(2000);
 	    
 	    languageScreen.click_searchLanguages("Spanish");
-	    languageScreen.verify_SpanishLanguageDisplayed();    //verify that Spanish language is displayed in dropdown when we enter Spanish in search box   
+	    languageScreen.searchFor_LanguagesTypedInSearchBox();    //verify that Spanish language is displayed in dropdown when we enter Spanish in search box   
 				
-		ResetDevice resetDevice = new ResetDevice(driver);               //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+	    //To RESET the DEVICE
+	    Thread.sleep(2000);
+	    languageScreen.click_HelpSettingsGEAR();  //click on the Help & Settings Gear icon on TOP
+	    
+	    
+		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 

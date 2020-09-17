@@ -38,10 +38,16 @@ public class TC_35_SearchLanguage_CHINA extends BaseTest {
 	    Thread.sleep(2000);
 	    languageScreen.click_searchLanguages("CHINA");
 	    Thread.sleep(2000);
-	    languageScreen.verify_LanguageDisplayed_BySeaching_forChina();    //verify that Chinese languages(Cantonese, Chaochow) are displayed in dropdown when we enter CHINA in search box    
+	    languageScreen.searchFor_LanguagesTypedInSearchBox();    //verify that Chinese languages(Cantonese, Chaochow) are displayed in dropdown when we enter CHINA in search box    
 	    Thread.sleep(2000);
 	    
-		ResetDevice resetDevice = new ResetDevice(driver);               //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+	  //To RESET the DEVICE
+	    Thread.sleep(2000);
+	    languageScreen.click_HelpSettingsGEAR();  //click on the Help & Settings Gear icon on TOP
+	    
+	    
+		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 
