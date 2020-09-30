@@ -54,7 +54,9 @@ public class TC_103_Sorting_ByType extends BaseTest{
 		MobileElement el1 = (MobileElement) driver.findElement(By.id("selectedAudioLanguage"));
 		el1.click();
 		Thread.sleep(4000);
-		holdScreen_Audio.click_AudioCallHangup();
+		// holdScreen_Audio.click_AudioCallHangup();  
+		 
+	    holdScreen_Audio.click_AudioCancelCall();
 		System.out.println("Audio Call Hangup Button is clicked to END the SPANISH Call");
 		//callSurveyWindow.click_Skip();      //To Skip the Survey Window
 		
@@ -62,7 +64,9 @@ public class TC_103_Sorting_ByType extends BaseTest{
 		MobileElement el3 = (MobileElement) driver.findElement(By.id("selectedAudioLanguage"));
 		el3.click();
 		Thread.sleep(1000);
-		holdScreen_Audio.click_AudioCallHangup();
+		// holdScreen_Audio.click_AudioCallHangup();  
+		 
+	    holdScreen_Audio.click_AudioCancelCall();
 		Thread.sleep(2000);
 		System.out.println("Audio Call Hangup Button is clicked to END the VIETNAMESE Call");
 		//callSurveyWindow.click_Skip();      //To Skip the Survey Window
@@ -71,7 +75,9 @@ public class TC_103_Sorting_ByType extends BaseTest{
 		MobileElement el2 = (MobileElement) driver.findElement(By.id("selectedAudioLanguage"));
 		el2.click();
 		Thread.sleep(4000);
-		holdScreen_Audio.click_AudioCallHangup();
+		// holdScreen_Audio.click_AudioCallHangup();  
+		 
+	    holdScreen_Audio.click_AudioCancelCall();
 		System.out.println("Audio Call Hangup Button is clicked to END the CANTONESE Call");
 		Thread.sleep(2000);
 		//callSurveyWindow.click_Skip();      //To Skip the Survey Window

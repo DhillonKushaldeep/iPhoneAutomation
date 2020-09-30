@@ -3,6 +3,7 @@
  */
 package OPI_Interpretation.tests;
 
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.appium.core.BaseTest;
@@ -10,6 +11,8 @@ import com.appium.pages.HoldScreen_Audio;
 import com.appium.pages.LanguageScreen;
 import com.appium.pages.LoginPage;
 import com.appium.pages.ResetDevice;
+
+import io.appium.java_client.MobileBy;
 
 /**
  * @author kushaldeepdhillon
@@ -35,21 +38,29 @@ public class TC_48_CancelCallBeforeConnecting extends BaseTest{
 		
 		LanguageScreen languageScreen = new LanguageScreen(driver);
 	    Thread.sleep(2000);
+	    languageScreen.verify_TopLanguages();
+	    Thread.sleep(2000);
+	    languageScreen.click_SpanishLanguage();   
 	    
-	    languageScreen.click_SpanishLanguage();
-	    languageScreen.click_AudioLanguageTileSplit();
+	    WebElement el = driver.findElement(MobileBy.AccessibilityId("selectedAudioLanguage")); //clicking on the AUDIO TILE
+	    el.click();
 	    
 	 
-	    //verifying all the placeholder values on the screen: Speaker, Mute Button, Call Hangup, Connected label
+	    //verifying all the placeholder values on the screen: Cancel Call, Connecting label
 	    HoldScreen_Audio holdScreen_Audio = new HoldScreen_Audio(driver);
-	    holdScreen_Audio.verifyConnectedLabelDisplayed();
-	    System.out.println("Connected is displayed");
+	    holdScreen_Audio.verifyConnectingToIntLabelDisplayed();
+	    System.out.println("Connecting to interpreter is displayed");
+	    holdScreen_Audio.click_AudioCancelCall();
+	    System.out.println("Audio Cancel Call Button is displayed");
 	    
-	    holdScreen_Audio.click_AudioCallHangup();
-	    System.out.println("Audio Call Hangup Button is displayed");
+	    
+	  //To RESET the DEVICE
+	    Thread.sleep(2000);
+	    languageScreen.click_HelpSettingsGEAR();  //click on the Help & Settings Gear icon on TOP
 	    
 	    
 		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 

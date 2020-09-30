@@ -62,7 +62,9 @@ public class TC_139_RestrictionSet extends BaseTest{   //authcod139
 	    holdScreen_Audio.verifyAudioCallMuteButtonOnDisplayed();
 	    System.out.println("Audio Call Mute Button is displayed");
 	    
-	    holdScreen_Audio.click_AudioCallHangup();
+	 // holdScreen_Audio.click_AudioCallHangup();  
+		 
+	    holdScreen_Audio.click_AudioCancelCall();
 	    System.out.println("Audio Call Hangup Button is clicked");
 	    
 	    CallSurveyWindow callSurveyWindow = new CallSurveyWindow(driver);

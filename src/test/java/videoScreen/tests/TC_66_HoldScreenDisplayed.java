@@ -35,19 +35,15 @@ public class TC_66_HoldScreenDisplayed extends BaseTest{
 		driver.switchTo().alert().accept();       //To give access to Camera
 		} catch (Exception e) {
 			
-		
-		}			
+	}			
 		
 		
 		LanguageScreen languageScreen = new LanguageScreen(driver);
 		languageScreen.click_searchLanguages("Punjabi");
 		languageScreen.click_PunjabiLanguage();
-	    
 	    Thread.sleep(2000);
 	    
-	   // MobileElement el1 = (MobileElement) driver.findElement(By.id("selectedAudioLanguage"));
-	    MobileElement el2 = (MobileElement) driver.findElement(By.id("selectedVideoLanguage"));
-	    //el1.click();
+	     MobileElement el2 = (MobileElement) driver.findElement(By.id("selectedVideoLanguage"));
 	     el2.click();
 	    
 	     HoldScreen_Video holdScreen_Video = new HoldScreen_Video(driver);
@@ -56,16 +52,17 @@ public class TC_66_HoldScreenDisplayed extends BaseTest{
 		 Thread.sleep(2000);
 		    
 		    
-	    Connected_VideoScreen connected_VideoScreen = new Connected_VideoScreen(driver);
-	    connected_VideoScreen.click_CallEnd();
-	    Thread.sleep(1000);
+		 holdScreen_Video.click_CancelVideoCall();
+		 System.out.println("Video Cancel Call Button is clicked");
+	     Thread.sleep(2000);
 	    
-	    CallSurveyWindow callSurveyWindow = new CallSurveyWindow(driver);
-	    callSurveyWindow.verifyCallEndedIconDisplayed();
-	    callSurveyWindow.click_Skip();
-	    System.out.println("Call Survey Window is displayed and press on Skip button");
+	   //To RESET the DEVICE
+	    Thread.sleep(2000);
+	    languageScreen.click_HelpSettingsGEAR();  //click on the Help & Settings Gear icon on TOP
+	    
 	    
 		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 

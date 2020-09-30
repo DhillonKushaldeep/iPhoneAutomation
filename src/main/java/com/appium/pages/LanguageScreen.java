@@ -53,7 +53,7 @@ public class LanguageScreen extends BasePage {
 		
     	click(AllLanguages.toBy());
 		Thread.sleep(1000);
-		System.out.println("All languages");
+		System.out.println("clicked on All languages");
 	
 	}
    
@@ -85,8 +85,8 @@ public class LanguageScreen extends BasePage {
 		
     	click(SearchLanguages.toBy());
 		Thread.sleep(2000);	
-		System.out.println("Search Languages displayed");
 		setText(SearchLanguages.toBy(), text);
+		System.out.println("Search Languages displayed");
 	}
     
     public void verify_SectionIndexDisplayed() throws InterruptedException{		
@@ -122,11 +122,21 @@ public class LanguageScreen extends BasePage {
     	click(AmericanSignLanguage.toBy());
 		Thread.sleep(4000);	
 	}
+   
+   public void viewAmericanSignLanguageSchedule() throws InterruptedException{		
+		
+	   waitForElementPresent(AmericanSignLanguageVideoSchedule.toBy());
+	   Thread.sleep(2000);
+		
+	   click(CloseSchedule.toBy());
+	   Thread.sleep(2000);	
+	}   
     
     public void click_PunjabiLanguage() throws InterruptedException{		
 		
     	click(Punjabi.toBy());
 		Thread.sleep(2000);	
+		System.out.println("Clicked on PUNJABI successfully");
 		
 	}
     
@@ -134,6 +144,7 @@ public class LanguageScreen extends BasePage {
 		
     	click(Portuguese.toBy());
 		Thread.sleep(2000);	
+		System.out.println("Clicked on Portuguese successfully");
 		
 	}
     
@@ -141,13 +152,14 @@ public class LanguageScreen extends BasePage {
 		
     	click(FrenchLanguage.toBy());
 		Thread.sleep(2000);	
-		
+		System.out.println("Clicked on French successfully");
 	}
     
    public void clickCantonese() throws InterruptedException{		
 		
     	click(Cantonese.toBy());
-		Thread.sleep(2000);	
+		Thread.sleep(2000);
+		System.out.println("Clicked on Cantonese successfully");
 		
 	}
     
@@ -206,10 +218,22 @@ public class LanguageScreen extends BasePage {
 		Thread.sleep(1000);
 		
 	}
+    
+    public void click_FrenchLanguageAfterSearch() throws InterruptedException{
+		
+    	waitForElementPresent(FrenchLanguage.toBy());
+		Thread.sleep(5000);
+		System.out.println("French Language displayed");
+		click(FrenchLanguage.toBy());
+ 		Thread.sleep(1000);
+ 		System.out.println("Clicked on French language");
+ 		
+ 	}
+   
 
      public void click_FrenchLanguage() throws InterruptedException{		
 		
-	    click(Alphabet_F_Displayed.toBy());              //click on Alpabet F
+	   click(Alphabet_F_Displayed.toBy());              //click on Alpabet F
 		Thread.sleep(1000);
     	click(FrenchLanguage.toBy());
 		Thread.sleep(1000);
@@ -241,7 +265,7 @@ public class LanguageScreen extends BasePage {
      
     public void click_alpahbetS() throws InterruptedException{		
 		
-    	click(Alphabet_S_Displayed.toBy());              //click on Alpabet S
+    	click(Alphabet_S_Displayed.toBy());              //click on Alphabet S
 		Thread.sleep(1000);
 		System.out.println("Alphabet S displayed and clicked");
 		
@@ -254,6 +278,14 @@ public class LanguageScreen extends BasePage {
      }
 				
  }
+    
+	public void click_alpahbetF() throws InterruptedException{		
+			
+	    	click(Alphabet_F_Displayed.toBy());              //click on Alphabet F
+			Thread.sleep(1000);
+			System.out.println("Alphabet F displayed and clicked");
+					
+	 }
     
     
 	    //Method to Get the list of languages THAT shows up after searching in search box "SPA" or "CHINA"

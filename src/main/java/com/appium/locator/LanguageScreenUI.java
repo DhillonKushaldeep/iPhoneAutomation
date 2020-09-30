@@ -21,10 +21,11 @@ public enum LanguageScreenUI implements ILocator {
 	SectionIndex(By.xpath("//XCUIElementTypeApplication[@name=\"LanguageLine\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther[6]/XCUIElementTypeOther]")),
 	
 	
-	Alphabet_S_Displayed(By.xpath("//XCUIElementTypeButton[@name=\"alphaIndexS\"]")),                               
+	Alphabet_S_Displayed(By.xpath("//XCUIElementTypeButton[@name=\"alphaIndexS\"]")), 
+	Alphabet_F_Displayed(By.xpath("//XCUIElementTypeButton[@name=\"alphaIndexF\"]")),
 	SamoanLanguage(By.xpath("//XCUIElementTypeCell[@name=\"Samoan\"]")),  
-	SangoLanguage(By.xpath("XCUIElementTypeCell[@name=\"Sango\"]")),
-	SeraikiLanguage(By.xpath("XCUIElementTypeCell[@name=\"Seraiki\"]")),
+	SangoLanguage(By.xpath("//XCUIElementTypeCell[@name=\"Sango\"]")),
+	SeraikiLanguage(By.xpath("//XCUIElementTypeCell[@name=\"Seraiki\"]")),
 	
 	
 	LanguageListBasedOnIndex(By.xpath("//XCUIElementTypeApplication[@name=\"InSight\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[6]/XCUIElementTypeCollectionView/XCUIElementTypeCell")),   
@@ -34,26 +35,37 @@ public enum LanguageScreenUI implements ILocator {
 	VietnameseSectionIUndex(By.xpath("//XCUIElementTypeStaticText[@name=\"alphaIndexV\"]")),
 	
 	
-	Alphabet_F_Displayed(By.xpath("//XCUIElementTypeButton[@name=\"alphaIndexF\"]")),
-	FrenchLanguage(By.xpath("XCUIElementTypeStaticText[@name=\"French\"]")),
-	GermanLanguage(By.xpath("XCUIElementTypeStaticText[@name=\"German\"]")),
+		
+	
+	FrenchLanguage(By.xpath("//*[@name=\"French\"]")),  	
+	//XCUIElementTypeStaticText[@name="French"]
+
+
+	
+	
+	GermanLanguage(By.xpath("//XCUIElementTypeStaticText[@name=\"German\"]")),
 	
 	
 	SearchLanguages(By.xpath("//XCUIElementTypeSearchField[@name=\"Search by Language or Country\"]")),
-	SpanishBySearch(By.xpath("//XCUIElementTypeStaticText[@name=\"Spanish\"]")),  
+	SpanishBySearch(By.xpath("//*[@name=\"Spanish\"]")),  
 
-	Punjabi(By.xpath("XCUIElementTypeStaticText[@name=\"Punjabi\"]")),
-	AmericanSignLanguage(By.xpath("//XCUIElementTypeStaticText[@name=\"American Sign Language\"]")),
-	Portuguese(By.xpath("XCUIElementTypeStaticText[@name=\"Portuguese\"]")),
-	Cantonese(By.xpath("//XCUIElementTypeStaticText[@name=\"Cantonese\"]")),
-	Chaochow(By.xpath("//XCUIElementTypeStaticText[@name=\"Chaochow\"]")),
+	Punjabi(By.xpath("//*[@name=\"Punjabi\"]")),
+	AmericanSignLanguage(By.xpath("//*[@name=\"American Sign Language\"]")),
+	AmericanSignLanguageVideoSchedule(By.xpath("//*[@name=\"American Sign Language Video Schedule\"]")),
+	CloseSchedule(By.xpath("//*[@name=\"InterpreterAvailabilityClose\"]")),
+	//XCUIElementTypeStaticText[@name="American Sign Language Video Schedule"]
+    //XCUIElementTypeOther[@name="InterpreterAvailabilityClose"]
 	
-	Acholi(By.xpath("//XCUIElementTypeStaticText[@name=\"Acholi\"]")),
+	Portuguese(By.xpath("//*[@name=\"Portuguese\"]")),
+	Cantonese(By.xpath("//*[@name=\"Cantonese\"]")),
+	Chaochow(By.xpath("//*[@name=\"Chaochow\"]")),
+	
+	Acholi(By.xpath("//*[@name=\"Acholi\"]")),
 	
 	
 	//*******************************************************When we Click on ASL, next page opens up on top of it with its schedule     BEGIN **************************************************************************//
 	
-	ASL_VideoLanguage(By.xpath("//XCUIElementTypeStaticText[@name=\"American Sign Language Video Schedule\"]")),     //Page that opens up when we click on ASL language --> View Video Availability
+	ASL_VideoLanguage(By.xpath("//*[@name=\"American Sign Language Video Schedule\"]")),     //Page that opens up when we click on ASL language --> View Video Availability
 	ShowAllLanguagesLinkBelow(By.xpath("//XCUIElementTypeSearchField[@name=\"Search Languages\"]")),                 //Show All Languages Link present below the schedule
 	CloseAtTop(By.xpath("//XCUIElementTypeOther[@name=\"InterpreterAvailabilityClose\"]")),                          //Close displayed at the Top                                                                                                                                                   
 	
@@ -64,7 +76,6 @@ public enum LanguageScreenUI implements ILocator {
 	
 	
 	
-	//AlertMessage_NoLanguagesMatchYourSearch(By.xpath("XCUIElementTypeStaticText[@name=\"noSearchResults\"]")),
 	
 	AlertMessage_NoLanguagesMatchYourSearch(By.xpath("//XCUIElementTypeApplication[@name=\"InSight\"]/XCUIElementTypeWindow[1]"
 			+ "/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[6]/XCUIElementTypeStaticText")),	

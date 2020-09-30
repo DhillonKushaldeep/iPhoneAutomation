@@ -23,7 +23,8 @@ public enum HoldScreen_AudioUI implements ILocator {
 	LabelConnected(By.xpath("//XCUIElementTypeStaticText[@name=\"Connected.\"]")),
 	
 	
-	ConnectedLabel(By.xpath("	//XCUIElementTypeStaticText[@name=\"Connected.\"]"));
+	ConnectedLabel(By.xpath("//XCUIElementTypeStaticText[@name=\"Connected.\"]")),
+	ConnectingLabel(By.xpath("//XCUIElementTypeStaticText[@name=\"labelConnecting\"]"));
 	
 	
 	

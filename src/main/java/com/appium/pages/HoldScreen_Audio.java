@@ -1,6 +1,11 @@
 package com.appium.pages;
 
 import static com.appium.locator.HoldScreen_AudioUI.*;
+import static com.appium.locator.HoldScreen_VideoUI.Cancel_VideoCall;
+import static com.appium.locator.HoldScreen_VideoUI.labelConnectingToYour;
+import static com.appium.locator.HoldScreen_VideoUI.labelInterpreter;
+import static com.appium.locator.HoldScreen_VideoUI.labelWaiting;
+
 import com.appium.core.BasePage;
 import io.appium.java_client.AppiumDriver;
 
@@ -20,6 +25,13 @@ public class HoldScreen_Audio extends BasePage {
 		Thread.sleep(1000);
 	
 	}
+    
+    public void verifyConnectingToIntLabelDisplayed() throws InterruptedException{		
+		
+ 	   waitForElementPresent(ConnectingLabel.toBy());
+ 		Thread.sleep(1000);
+ 	
+ 	}
 
    public void verifyConnectedLabelDisplayed() throws InterruptedException{		
 		
@@ -79,11 +91,30 @@ public class HoldScreen_Audio extends BasePage {
    public void LabelConnectedDisplayed() throws InterruptedException{		
 		
 	   waitForElementPresent(LabelConnected.toBy());
-		
+	   Thread.sleep(1000);
 	
 	}
 
-
+   //Connecting to Your French(any) Interpreter is displayed
+   public void verifyConnectingtoYourInterpreterdDisplayed() throws InterruptedException{		
+		
+	   waitForElementPresent(labelConnectingToYour.toBy());
+	   Thread.sleep(1000);
+	   waitForElementPresent(labelWaiting.toBy());
+	   Thread.sleep(1000);
+	   waitForElementPresent(labelInterpreter.toBy());
+	   Thread.sleep(1000);
+	
+	}
+  
+   
+   
+   public void click_CancelVideoCall() throws InterruptedException{		
+ 		
+     	click(Cancel_VideoCall.toBy());
+ 		Thread.sleep(1000);
+ 	
+ 	}
 
 
 

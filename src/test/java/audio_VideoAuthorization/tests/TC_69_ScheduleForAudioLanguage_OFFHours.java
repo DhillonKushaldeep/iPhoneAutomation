@@ -39,32 +39,31 @@ public class TC_69_ScheduleForAudioLanguage_OFFHours extends BaseTest{
 		
 		
 		LanguageScreen languageScreen = new LanguageScreen(driver);     // click on Acholi
+		languageScreen.click_AllLanguages();
 		languageScreen.click_AcholiLanguage();   
 		
 		 Thread.sleep(2000);
-		    
-		 MobileElement el1 = (MobileElement) driver.findElement(By.id("selectedAudioLanguage"));
-		 //MobileElement el2 = (MobileElement) driver.findElement(By.id("selectedVideoLanguage"));
+		 MobileElement el1 = (MobileElement) driver.findElement(By.id("selectedAudioOnlyLanguage"));
 		 el1.click();
-		 //el2.click();
 		
 		 HoldScreen_Audio holdScreen_Audio = new HoldScreen_Audio(driver);
-		 holdScreen_Audio.verifyAudioCallSpeakerButtonDisplayed();
-		 holdScreen_Audio.verifyConnectedLabelDisplayed();
-		 holdScreen_Audio.click_AudioCallHangup();
+		 holdScreen_Audio.verifyConnectingtoYourInterpreterdDisplayed();
+		 System.out.println("Connecting to Your Interpreter is displayed");
+		 Thread.sleep(1000);
 		 
-		 //Call does not get connected to the Interpreter in this span of time, so no need of this code for Call Survey Window
-		 
-		/* 
-		 CallSurveyWindow callSurveyWindow = new CallSurveyWindow(driver);
-		 callSurveyWindow.verifyCallEndedIconDisplayed();
-		 callSurveyWindow.click_Skip();
-		 System.out.println("Call Survey Window is displayed and press on Skip button");*/
-		 
+		 holdScreen_Audio.click_AudioCancelCall();
+		 System.out.println("Audio Cancel Call Button is clicked");
+	     Thread.sleep(2000);
 		    
-	     ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
-		 resetDevice.resetDeviceApp();
-		 Thread.sleep(2000);
+		//To RESET the DEVICE
+	    Thread.sleep(2000);
+	    languageScreen.click_HelpSettingsGEAR();  //click on the Help & Settings Gear icon on TOP
+	    
+	    
+		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
+		resetDevice.resetDeviceApp();
+		Thread.sleep(2000);
 		
 		
 	}

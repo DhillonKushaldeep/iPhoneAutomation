@@ -1,6 +1,7 @@
 package com.appium.pages;
 
 import static com.appium.locator.LanguageScreenUI.*;
+import static com.appium.locator.HoldScreen_AudioUI.AudioCallCancelButton;
 import static com.appium.locator.HoldScreen_VideoUI.*;
 import static com.appium.locator.ResetDeviceUI.*;
 
@@ -21,6 +22,7 @@ public class HoldScreen_Video extends BasePage {
 	  	   Thread.sleep(1000);
 	  	
   	}
+	
 	
 
      //Connecting to Your French(any) Interpreter is displayed
@@ -56,6 +58,7 @@ public class HoldScreen_Video extends BasePage {
   		
 	  	   waitForElementPresent(sorryNoVideoINTavailableMessage.toBy());
 	  	   Thread.sleep(1000);
+	  	
 	  	
 	}
 

@@ -3,13 +3,17 @@
  */
 package holdScreen.tests;
 
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.appium.core.BaseTest;
 import com.appium.pages.HoldScreen_Audio;
+import com.appium.pages.HoldScreen_Video;
 import com.appium.pages.LanguageScreen;
 import com.appium.pages.LoginPage;
 import com.appium.pages.ResetDevice;
+
+import io.appium.java_client.MobileBy;
 
 /**
  * @author KushaldeepDhillon
@@ -36,20 +40,26 @@ public class TC_44_ChoseVideoINT_CancelCallBeforeConnecting extends BaseTest{
 		LanguageScreen languageScreen = new LanguageScreen(driver);
 		languageScreen.verify_TopLanguages();
 	    Thread.sleep(2000);
+	    languageScreen.click_searchLanguages("Spanish");
+	    Thread.sleep(2000);
+	    languageScreen.click_SpanishLanguage(); 
 	    
-	   
+	    WebElement el = driver.findElement(MobileBy.AccessibilityId("selectedVideoLanguage")); //clicking on the VIDEO TILE
+	    el.click();
 	    
-	    languageScreen.click_SpanishLanguage();     
-	    languageScreen.click_AudioLanguageTileSplit();
-	    
-	    //verifying all the placeholder values on the screen: Speaker, Mute Button, Call Hangup, Connected label
-	    HoldScreen_Audio holdScreen_Audio = new HoldScreen_Audio(driver);
-	    holdScreen_Audio.click_AudioCallHangup();
-	    System.out.println("The interpreter request call should be disconnected.");
+	    HoldScreen_Video holdScreen_Video = new HoldScreen_Video(driver);
+	    holdScreen_Video.click_CancelCall();
+	    System.out.println("Clicked on Cancel call successfully. The interpreter request call should be disconnected.");
 	    Thread.sleep(2000);
 	    
 	    
+	    //To RESET the DEVICE
+	    Thread.sleep(2000);
+	    languageScreen.click_HelpSettingsGEAR();  //click on the Help & Settings Gear icon on TOP
+	    
+	    
 		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 

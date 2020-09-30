@@ -71,10 +71,15 @@ public class TC_73_CallRouting_Audio_NotAvailable extends BaseTest{
 				
 			 holdScreen_Video.click_CancelCall();
 			 
+			//To RESET the DEVICE
+		    Thread.sleep(2000);
+		    languageScreen.click_HelpSettingsGEAR();  //click on the Help & Settings Gear icon on TOP
 		    
-		     ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
-			 resetDevice.resetDeviceApp();
-			 Thread.sleep(2000);
+		    
+			ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+			resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
+			resetDevice.resetDeviceApp();
+			Thread.sleep(2000);
 
 	}
 

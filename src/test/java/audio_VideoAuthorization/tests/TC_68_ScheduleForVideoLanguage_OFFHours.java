@@ -41,25 +41,25 @@ public class TC_68_ScheduleForVideoLanguage_OFFHours extends BaseTest{
 		LanguageScreen languageScreen = new LanguageScreen(driver);     // click on American Sign Language
 	    languageScreen.click_AmericanSignLanguage();
 	    
-	    MobileElement viewVideoAvailability = (MobileElement) driver.findElement(By.id("selectedVideoOnlyLanguage"));
+	    MobileElement viewVideoAvailability = (MobileElement) driver.findElement(By.id("View Video Availability"));////XCUIElementTypeStaticText[@name="View Video Availability"]
 	    viewVideoAvailability.click();
 	    Thread.sleep(2000);
-	    
-	    
-	    
+	   
 	  //******************************************************* When we Click on ASL, next page opens up on top of it with its schedule     **************************//
 	    LanguageScreen languageScreen1 = new LanguageScreen(driver);
-	    languageScreen1.verify_ASL_VideoLanguageDisplayed();
-	    languageScreen1.verify_ShowAllLanguagesLinkBelowDisplayed();
-	    languageScreen1.click_CloseAtTopLink();
+	    languageScreen1.viewAmericanSignLanguageSchedule();
+	    
 	  //******************************************************* When we Click on ASL, next page opens up on top of it with its schedule     **************************//
+	    
+	    //To RESET the DEVICE
+	    Thread.sleep(2000);
+	    languageScreen.click_HelpSettingsGEAR();  //click on the Help & Settings Gear icon on TOP
 	    
 	    
 		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
-		
-
 	}
 
 }

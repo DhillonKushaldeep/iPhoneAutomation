@@ -48,11 +48,6 @@ public class TC_72_VerifyCallRouting extends BaseTest{
 			 MobileElement viewVideoAvailability = (MobileElement) driver.findElement(By.id("selectedVideoOnlyLanguage"));
 			 viewVideoAvailability.click();
 			 Thread.sleep(2000);
-			    
-			 //MobileElement el1 = (MobileElement) driver.findElement(By.id("selectedAudioLanguage"));
-			 //MobileElement el2 = (MobileElement) driver.findElement(By.id("selectedVideoLanguage"));
-			 //el1.click();
-			 //el2.click();
 			
 			 HoldScreen_Video holdScreen_Video = new HoldScreen_Video(driver);
 			 holdScreen_Video.verifyLoadingSpinnerDisplayed();
@@ -78,10 +73,15 @@ public class TC_72_VerifyCallRouting extends BaseTest{
 				
 			 holdScreen_Video.click_CancelCall();
 			 
-			    
-		     ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
-			 resetDevice.resetDeviceApp();
-			 Thread.sleep(2000);
+			//To RESET the DEVICE
+		    Thread.sleep(2000);
+		    languageScreen.click_HelpSettingsGEAR();  //click on the Help & Settings Gear icon on TOP
+		    
+		    
+			ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+			resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
+			resetDevice.resetDeviceApp();
+			Thread.sleep(2000);
 
 	}
 
