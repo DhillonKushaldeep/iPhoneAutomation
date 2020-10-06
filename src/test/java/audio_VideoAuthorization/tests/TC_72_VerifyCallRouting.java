@@ -38,40 +38,37 @@ public class TC_72_VerifyCallRouting extends BaseTest{
 			
 			}			
 			
-			
 			LanguageScreen languageScreen = new LanguageScreen(driver);     // click on Portuguese 
 			languageScreen.click_searchLanguages("Portuguese");
 			languageScreen.click_PortugueseLanguage();
-			
-			 Thread.sleep(2000);
 			 
 			 MobileElement viewVideoAvailability = (MobileElement) driver.findElement(By.id("selectedVideoOnlyLanguage"));
 			 viewVideoAvailability.click();
-			 Thread.sleep(2000);
 			
 			 HoldScreen_Video holdScreen_Video = new HoldScreen_Video(driver);
-			 holdScreen_Video.verifyLoadingSpinnerDisplayed();
 			 holdScreen_Video.verifyConnectingtoYourInterpreterdDisplayed();
 			 
 			 //  Connecting to your Portuguese Interpreter
-			 MobileElement element =  (MobileElement) driver.findElementByAccessibilityId("labelConnecting");      //Connecting to Your
-			 MobileElement element1 = (MobileElement) driver.findElementByAccessibilityId("labelWaiting");        //	Portuguese
-			 MobileElement element2 = (MobileElement) driver.findElementByAccessibilityId("labelInterpreter");    //Interpreter
+				/*
+				 * MobileElement element = (MobileElement)
+				 * driver.findElementByAccessibilityId("labelConnecting"); //Connecting to Your
+				 * MobileElement element1 = (MobileElement)
+				 * driver.findElementByAccessibilityId("labelWaiting"); // Portuguese
+				 * MobileElement element2 = (MobileElement)
+				 * driver.findElementByAccessibilityId("labelInterpreter"); //Interpreter
+				 * 
+				 * String message = element.getText(); String message1 = element1.getText();
+				 * String message2 = element2.getText();
+				 * 
+				 * String SucessMessage = "Connecting to Your"; String SucessMessage1 =
+				 * "Portuguese"; String SucessMessage2 = "Interpreter";
+				 * 
+				 * assertEquals(message, SucessMessage); assertEquals(message1, SucessMessage1);
+				 * assertEquals(message2, SucessMessage2); Thread.sleep(5000);
+				 */
+				 
 				
-			 String message = element.getText();
-			 String message1 = element1.getText();
-			 String message2 = element2.getText();
-			 
-			 String SucessMessage  = "Connecting to Your";	 
-			 String SucessMessage1 = "Portuguese";
-			 String SucessMessage2 = "Interpreter";
-								 
-			 assertEquals(message,  SucessMessage);	
-			 assertEquals(message1, SucessMessage1);
-			 assertEquals(message2, SucessMessage2);
-			 Thread.sleep(5000);	
-				
-			 holdScreen_Video.click_CancelCall();
+			 holdScreen_Video.click_CancelVideoCall();
 			 
 			//To RESET the DEVICE
 		    Thread.sleep(2000);

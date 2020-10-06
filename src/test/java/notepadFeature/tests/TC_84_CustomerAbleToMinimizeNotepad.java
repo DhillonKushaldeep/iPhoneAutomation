@@ -46,14 +46,10 @@ public class TC_84_CustomerAbleToMinimizeNotepad extends BaseTest{
 		
 		languageScreen.click_searchLanguages("Punjabi");
 		languageScreen.click_PunjabiLanguage();
-		
 		Thread.sleep(2000);
 	    
-		//MobileElement el1 = (MobileElement) driver.findElement(By.id("selectedAudioLanguage"));
 		MobileElement el2 = (MobileElement) driver.findElement(By.id("selectedVideoLanguage"));
-		//el1.click();
 		el2.click();
-		
 		Thread.sleep(5000);
 		
 	/**
@@ -67,14 +63,17 @@ public class TC_84_CustomerAbleToMinimizeNotepad extends BaseTest{
 		System.out.println("Notepad is Minimized");
 		
 		
-		
-		
 		CallSurveyWindow callSurveyWindow = new CallSurveyWindow(driver);
 		callSurveyWindow.click_Skip();
 		System.out.println("SKIP is clicked on Survey window");
 		
-		Thread.sleep(2000);
-		ResetDevice resetDevice = new ResetDevice(driver); //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		//To RESET the DEVICE
+	    Thread.sleep(2000);
+	    languageScreen.click_HelpSettingsGEAR();  //click on the Help & Settings Gear icon on TOP
+	    
+	    
+		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 	}

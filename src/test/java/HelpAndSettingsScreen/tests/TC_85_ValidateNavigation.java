@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import com.appium.core.BaseTest;
 import com.appium.pages.HelpAndSettingsLink;
+import com.appium.pages.LanguageScreen;
 import com.appium.pages.LoginPage;
 import com.appium.pages.ResetDevice;
 
@@ -31,32 +32,28 @@ public class TC_85_ValidateNavigation extends BaseTest{
 		
 		}		
 		
-		loginPage.HelpAndSettingsLink_GearIcon();
+		loginPage.HelpAndSettingsLink_GearIconAfterLOGIN(); 
 		
 		HelpAndSettingsLink helpAndSettingsLink = new HelpAndSettingsLink(driver);
-		helpAndSettingsLink.verifyDeviceLogin();
-		System.out.println("Device Login is displayed");
+		helpAndSettingsLink.verifyFreqAskedQues();           //Frequently Asked Questions
 		
-		helpAndSettingsLink.verifyTechnicalAssistance();
-		System.out.println("Technical Assistance is displayed");
+		helpAndSettingsLink.verifyVideoAvailability();       //Video Interpreter Availability
 		
-		helpAndSettingsLink.verifyVideoAvailability();
-		System.out.println("Video Availability is displayed");
+		helpAndSettingsLink.verifyContactUs();              //Contact us
 		
-		helpAndSettingsLink.verifyGetAssistance();
-		System.out.println("GetAssistance is displayed");
+		helpAndSettingsLink.verifyCallHistory();            //Call History
 		
-		helpAndSettingsLink.verifyCallHistory();
-		System.out.println("Call History is displayed");
+		helpAndSettingsLink.verifyNetworkDiagnostics();   //Network Diagnostics
 		
-		helpAndSettingsLink.verifyNetworkDiagnostics();
-		System.out.println("Network Diagnostics is displayed");
-		
-		helpAndSettingsLink.verifyPlaceTestCall();
-		System.out.println("Place Test Call is displayed");
+		helpAndSettingsLink.verifyPlaceTestCall();        //Place Test Call      	
+		   
+		helpAndSettingsLink.verifyDeviceConfiguration();  //Device Configuration
 		
 				
-		ResetDevice resetDevice = new ResetDevice(driver); //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		//To RESET the DEVICE
+	    Thread.sleep(2000);
+		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 		

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-10-06T15:35:47 PDT" name="Default suite" finished-at="2020-10-06T15:36:49 PDT" duration-ms="61222">
+    <groups>
+    </groups>
+    <test started-at="2020-10-06T15:35:47 PDT" name="Default test" finished-at="2020-10-06T15:36:49 PDT" duration-ms="61222">
+      <class name="HelpAndSettingsScreen.tests.TC_91_VerifyVersionNumberDisplayed">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:HelpAndSettingsScreen.tests.TC_91_VerifyVersionNumberDisplayed@48aaecc3]" started-at="2020-10-06T15:35:47 PDT" name="setupReport" finished-at="2020-10-06T15:35:47 PDT" duration-ms="111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReport -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:HelpAndSettingsScreen.tests.TC_91_VerifyVersionNumberDisplayed@48aaecc3]" started-at="2020-10-06T15:35:47 PDT" name="setUp" finished-at="2020-10-06T15:36:11 PDT" duration-ms="23574" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setupMethod(java.lang.reflect.Method)[pri:0, instance:HelpAndSettingsScreen.tests.TC_91_VerifyVersionNumberDisplayed@48aaecc3]" started-at="2020-10-06T15:36:11 PDT" name="setupMethod" finished-at="2020-10-06T15:36:11 PDT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void HelpAndSettingsScreen.tests.TC_91_VerifyVersionNumberDisplayed.VerifyVersionNumberDisplayed() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method signature="VerifyVersionNumberDisplayed()[pri:0, instance:HelpAndSettingsScreen.tests.TC_91_VerifyVersionNumberDisplayed@48aaecc3]" started-at="2020-10-06T15:36:11 PDT" name="VerifyVersionNumberDisplayed" finished-at="2020-10-06T15:36:49 PDT" duration-ms="37619" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyVersionNumberDisplayed -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:HelpAndSettingsScreen.tests.TC_91_VerifyVersionNumberDisplayed@48aaecc3]" started-at="2020-10-06T15:36:49 PDT" name="tearDownMethod" finished-at="2020-10-06T15:36:49 PDT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyVersionNumberDisplayed status=SUCCESS method=TC_91_VerifyVersionNumberDisplayed.VerifyVersionNumberDisplayed()[pri:0, instance:HelpAndSettingsScreen.tests.TC_91_VerifyVersionNumberDisplayed@48aaecc3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:HelpAndSettingsScreen.tests.TC_91_VerifyVersionNumberDisplayed@48aaecc3]" started-at="2020-10-06T15:36:49 PDT" name="tearDown" finished-at="2020-10-06T15:36:50 PDT" duration-ms="1044" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownSuite()[pri:0, instance:HelpAndSettingsScreen.tests.TC_91_VerifyVersionNumberDisplayed@48aaecc3]" started-at="2020-10-06T15:36:50 PDT" name="tearDownSuite" finished-at="2020-10-06T15:36:50 PDT" duration-ms="386" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSuite -->
+      </class> <!-- HelpAndSettingsScreen.tests.TC_91_VerifyVersionNumberDisplayed -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

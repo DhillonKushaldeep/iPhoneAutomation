@@ -107,8 +107,7 @@ public class HoldScreen_Audio extends BasePage {
 	
 	}
   
-   
-   
+    
    public void click_CancelVideoCall() throws InterruptedException{		
  		
      	click(Cancel_VideoCall.toBy());

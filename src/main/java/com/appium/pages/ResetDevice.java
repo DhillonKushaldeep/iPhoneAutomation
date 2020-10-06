@@ -16,17 +16,20 @@ public class ResetDevice extends BasePage {
 		
 		click(ChangeCode.toBy());
 		Thread.sleep(1000);
+		System.out.println("Clicked on Change Code");
 		click(ResetDeviceActivation_RESET.toBy());
+		System.out.println("Clicked on Reset");
 		Thread.sleep(1000);
 		
 	}
+    
     
     
    public void DeviceLoginresetDeviceApp() throws InterruptedException{   //
 		
 		click(DeviceConfigLink.toBy());
 		Thread.sleep(1000);
-		
+		System.out.println("Clicked on Device Configuration link");
 	}
 
     public void settingSymbolAtTop_click() throws InterruptedException{		

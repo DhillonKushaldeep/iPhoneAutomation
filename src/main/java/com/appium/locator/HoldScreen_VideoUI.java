@@ -28,12 +28,18 @@ public enum HoldScreen_VideoUI implements ILocator {
 	sorryNoVideoINTavailableMessage(By.xpath("//XCUIElementTypeStaticText[@name=\"Sorry, we are currently unable to connect to your video interpreter at this time. "
 			                                                                   + "Please try again later or switch to an audio interpreter immediately.\"]")),
 	
+	
+	PortugueseSorryNoVideoINTavailableMessage(By.xpath("//XCUIElementTypeStaticText[@name=\"Sorry, we are currently unable to connect to your Portuguese video interpreter at this time.\"]")),
+	
+
+	
 	Cancel_VideoCall(By.xpath("//XCUIElementTypeButton[@name=\"errorCancelVideoCall\"]")),
 	SwitchToAudio(By.xpath("//XCUIElementTypeStaticText[@name=\"switchToAudioButton\"]"));
 
 	
 	
 	
+
 	
 	
 

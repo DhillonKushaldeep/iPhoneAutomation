@@ -219,6 +219,7 @@ public class BaseTest {
 			//capabilities.setCapability("unicodeKeyboard ", "true");
 			//capabilities.setCapability("app", getAppAbsoultePath());
 			break;
+			
 		case "iOS":
 			capabilities.setCapability("platformName", "iOS");
 			capabilities.setCapability("deviceName",  FileReader.readData("IDeviceName"));

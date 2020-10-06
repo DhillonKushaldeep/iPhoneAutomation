@@ -84,11 +84,19 @@ public class LoginPage extends BasePage {
 	}
 	
 	
-    public void HelpAndSettingsLink_GearIcon() throws InterruptedException{        
+    public void HelpAndSettingsLink_GearIcon() throws InterruptedException{        //Before Login
 		
 		click(HelpAndSettingsLink_GearIcon.toBy());
 		Thread.sleep(1000);
 		System.out.println("Help and Settings Gear icon at TOP");
+				
+	}
+    
+    public void HelpAndSettingsLink_GearIconAfterLOGIN() throws InterruptedException{        //After Login
+		
+		click(HelpAndSettingsLink_AfterLogin.toBy());
+		Thread.sleep(1000);
+		System.out.println("Help and Settings Gear icon at TOP after LOGIN");
 				
 	}
 	

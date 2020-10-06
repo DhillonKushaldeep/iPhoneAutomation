@@ -18,9 +18,8 @@ public class HoldScreen_Video extends BasePage {
 	//******************************************************************************************************8***************************//
 	public void verifyLoadingSpinnerDisplayed() throws InterruptedException{		
  		
-	  	   waitForElementPresent(LoadingSpinner.toBy());
-	  	   Thread.sleep(1000);
-	  	
+	  	 waitForElementPresent(LoadingSpinner.toBy());
+	  	 System.out.println("Spinner Loading");
   	}
 	
 	
@@ -34,12 +33,14 @@ public class HoldScreen_Video extends BasePage {
 	   Thread.sleep(1000);
 	   waitForElementPresent(labelInterpreter.toBy());
 	   Thread.sleep(1000);
+	   System.out.println("Connecting To Your Interpreter");
 	
 	}
     
      public void click_CancelCall() throws InterruptedException{		
  		
      	click(CancelCall.toBy());
+     	System.out.println("Clicked on Cancel call");
  		Thread.sleep(1000);
  	
  	}
@@ -62,10 +63,22 @@ public class HoldScreen_Video extends BasePage {
 	  	
 	}
 
+   //Sorry, we are currently unable to connect to your video interpreter at this time. 
+  	
+      public void verifyPortugueseSorryNoVideoINTavailableMessageDisplayed() throws InterruptedException{		
+   		
+ 	  	   waitForElementPresent(PortugueseSorryNoVideoINTavailableMessage.toBy());
+ 	  	   Thread.sleep(1000);
+ 	  	System.out.println("Displayed:  Sorry, we are currently unable to connect to your video interpreter at this time.");
+ 	  	
+ 	  	
+ 	}
+      
      public void click_CancelVideoCall() throws InterruptedException{		
   		
       	click(Cancel_VideoCall.toBy());
   		Thread.sleep(1000);
+  		System.out.println("Clicked on Cancel Video call");
   	
   	}
      

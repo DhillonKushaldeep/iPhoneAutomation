@@ -16,9 +16,9 @@ import org.openqa.selenium.By;
 		
 		
 		DeviceLogin(By.xpath("//XCUIElementTypeOther[@name=\"deviceLoginContainer\"]")),
-		TechnicalAssistance(By.xpath("//XCUIElementTypeOther[@name=\"technicalAssistanceContainer\"]")),
+		FAQ(By.xpath("//XCUIElementTypeOther[@name=\"technicalAssistanceContainer\"]")),
 		VideoAvailability(By.xpath("//XCUIElementTypeOther[@name=\"availabilityContainer\"]")),
-		GetAssistance(By.xpath("//XCUIElementTypeOther[@name=\"assistanceContainer\"]")),
+		contactUs(By.xpath("//XCUIElementTypeOther[@name=\"assistanceContainer\"]")),
 		CallHistory(By.xpath("//XCUIElementTypeOther[@name=\"historyContainer\"]")),
 		NetworkDiagnostics(By.xpath("//XCUIElementTypeOther[@name=\"networkDiagnostics\"]")),
 		PlaceTestCall(By.xpath("//XCUIElementTypeOther[@name=\"testCallContainer\"]")),
@@ -57,7 +57,7 @@ import org.openqa.selenium.By;
 		//clicking on  Place Test Call
 		TestVideoDisplay(By.xpath("//XCUIElementTypeOther[@name=\"whiteboardDetails\"]")),
 		smallVideoScreen(By.xpath("//XCUIElementTypeOther[@name=\"localVideoView\"]")),
-		videoHangupButton(By.xpath("//XCUIElementTypeStaticText[@name=\"videoHangupButton\"]")),
+		videoHangupButton(By.xpath("//XCUIElementTypeButton[@name=\"videoHangupButton\"]")), 
 		
 		
 		HelpAndSettingsLink_TOP(By.xpath("//XCUIElementTypeOther[@name=\"helpAndSettingsInHeader\"]")),

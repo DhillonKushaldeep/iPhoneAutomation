@@ -40,7 +40,7 @@ public enum LoginUI implements ILocator {
 	ContactUsHeaderAtTOP(By.xpath("//XCUIElementTypeStaticText[@name=\"Contact Us\"]")),     //9/02/2020
 
 	
-	GetAssistance(By.xpath("//XCUIElementTypeOther[@name=\"assistanceContainer\"]")),
+	contactUs(By.xpath("//XCUIElementTypeOther[@name=\"assistanceContainer\"]")),
 	VersionNumber(By.xpath("//XCUIElementTypeButton[@name=\"versionNumber\"]")),             //9/14/2020
 	
 	
@@ -48,10 +48,11 @@ public enum LoginUI implements ILocator {
 	
 	TechnicalAssistanceFirstQues(By.xpath("//XCUIElementTypeStaticText[@name=\"How do I access LanguageLine InSight Video Interpreting® services?\"]")),
 	GetAssistanceFirstQues(By.xpath("//XCUIElementTypeStaticText[@name=\"How Do I Contact LanguageLine?\"]")),
-	CloseButton(By.xpath("//XCUIElementTypeStaticText[@name=\"webviewCloseButton\"]")),
+	CloseButton(By.xpath("//XCUIElementTypeButton[@name=\"webviewCloseButton\"]")),
 	
 	
-	HelpAndSettingsLink_GearIcon(By.xpath("//XCUIElementTypeOther[@name=\"helpAndSettingsContainer\"]")),
+	HelpAndSettingsLink_GearIcon(By.xpath("//XCUIElementTypeOther[@name=\"helpAndSettingsContainer\"]")),  
+	HelpAndSettingsLink_AfterLogin(By.xpath("//XCUIElementTypeButton[@name=\"helpAndSettings\"]")),
 	CloseAtTOP(By.xpath("//XCUIElementTypeButton[@name=\"webviewCloseButton\"]"));       //Updated      9/02/2020
 
 	private final By locator;

@@ -32,19 +32,19 @@ public class TC_87_NavigateToGetAssistance extends BaseTest{
 		
 		}		
 		
-		loginPage.HelpAndSettingsLink_GearIcon();           
+		loginPage.HelpAndSettingsLink_GearIconAfterLOGIN();           
 		
 		HelpAndSettingsLink helpAndSettingsLink = new HelpAndSettingsLink(driver);
-		helpAndSettingsLink.ClickGetAssistance();
-		System.out.println("Get Assistance page is displayed. After clicking on it, verify the text for the First Question: How Do I Contact LanguageLine?");
+		helpAndSettingsLink.ClickContactUs();
 		
 		helpAndSettingsLink.verifyGetAssistanceContactUs();
-		System.out.println("Contact Us at the TOP");
-		
 		helpAndSettingsLink.clickCloseAtTOP();
-		System.out.println("Click Close link at the TOP");
+		
 			
-		ResetDevice resetDevice = new ResetDevice(driver);             //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		//To RESET the DEVICE
+	    Thread.sleep(2000);
+		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 

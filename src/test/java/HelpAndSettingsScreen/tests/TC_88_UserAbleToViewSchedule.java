@@ -32,26 +32,22 @@ public class TC_88_UserAbleToViewSchedule extends BaseTest{
 		
 		}		
 		
-		loginPage.HelpAndSettingsLink_GearIcon();           
+		loginPage.HelpAndSettingsLink_GearIconAfterLOGIN();           
 		
-		HelpAndSettingsLink helpAndSettingsLink = new HelpAndSettingsLink(driver);
+		HelpAndSettingsLink helpAndSettingsLink = new HelpAndSettingsLink(driver); //Video Interpreter Availability
 		helpAndSettingsLink.clickVideoAvailability();
-		System.out.println("Click Video Availability at TOP");
 		
 		helpAndSettingsLink.verifyVideoAvailability_Language();
-		System.out.println("Language is displayed at the TOP");
-		
 		helpAndSettingsLink.verifyVideoAvailability_LanguageAlbanian();
-		System.out.println("Language Albanian is displayed at the TOP");
-		
 		helpAndSettingsLink.verifyVideoAvailability_LanguageASL();
-		System.out.println("Language ASL is displayed at the TOP");
-		
 		
 		helpAndSettingsLink.clickVideoAvailability_Close();
-		System.out.println("Click Close link at the TOP");
+		
 			
-		ResetDevice resetDevice = new ResetDevice(driver);             //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		//To RESET the DEVICE
+	    Thread.sleep(2000);
+		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 

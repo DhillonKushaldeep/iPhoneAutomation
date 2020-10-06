@@ -42,34 +42,16 @@ public class TC_73_CallRouting_Audio_NotAvailable extends BaseTest{
 			LanguageScreen languageScreen = new LanguageScreen(driver);     // click on Portuguese 
 			languageScreen.click_searchLanguages("Portuguese");
 			languageScreen.click_PortugueseLanguage();
-			
 			 Thread.sleep(2000);
 			 
 			 MobileElement viewVideoAvailability = (MobileElement) driver.findElement(By.id("selectedVideoOnlyLanguage"));
 			 viewVideoAvailability.click();
 			 Thread.sleep(2000);
-			    
-			 //MobileElement el1 = (MobileElement) driver.findElement(By.id("selectedAudioLanguage"));
-			 //MobileElement el2 = (MobileElement) driver.findElement(By.id("selectedVideoLanguage"));
-			 //el1.click();
-			 //el2.click();
 			
 			 HoldScreen_Video holdScreen_Video = new HoldScreen_Video(driver);
-			 holdScreen_Video.verifyLoadingSpinnerDisplayed();
-			 holdScreen_Video.verifyConnectingtoYourInterpreterdDisplayed();
-			 
-			 // Sorry, we are currently unable to connect to your Portuguese video interpreter at this time.
-			 
-			 MobileElement element = (MobileElement) driver.findElementByAccessibilityId("Sorry, we are currently unable to connect to your Portuguese video interpreter at this time.");
+			 holdScreen_Video.verifyPortugueseSorryNoVideoINTavailableMessageDisplayed();
 				
-			String message = element.getText();
-			String SucessMessage = "Sorry, we are currently unable to connect to your Portuguese video interpreter at this time.";	                   
-								 
-			assertEquals(message, SucessMessage);					
-			Thread.sleep(5000);	
-				
-				
-			 holdScreen_Video.click_CancelCall();
+			 holdScreen_Video.click_CancelVideoCall();
 			 
 			//To RESET the DEVICE
 		    Thread.sleep(2000);

@@ -32,16 +32,15 @@ public class TC_91_VerifyVersionNumberDisplayed extends BaseTest{
 		
 		}		
 		
-		loginPage.HelpAndSettingsLink_GearIcon();           
+		loginPage.HelpAndSettingsLink_GearIconAfterLOGIN();           
 		
 		loginPage.verifyVersion();
-		System.out.println("Version Number is displayed");
 		Thread.sleep(1000);
 		
-		
-		
-		
-		ResetDevice resetDevice = new ResetDevice(driver);             //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		//To RESET the DEVICE
+	    Thread.sleep(2000);
+		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 

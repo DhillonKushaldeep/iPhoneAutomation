@@ -1,11 +1,11 @@
 package com.appium.pages;
 
 import static com.appium.locator.LoginUI.CloseButton;
-import static com.appium.locator.LoginUI.GetAssistance;
 import static com.appium.locator.LoginUI.GetAssistanceFirstQues;
 import static com.appium.locator.LoginUI.TechnicalAssistance;
 import static com.appium.locator.LoginUI.TechnicalAssistanceFirstQues;
 import static com.appium.locator.NetworkDiagnosticsUI.NetworkDiagnosticsLink;
+import static com.appium.locator.ResetDeviceUI.DeviceConfigLink;
 import static com.appium.locator.HelpAndSettingsLinkUI.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -203,76 +203,95 @@ public class HelpAndSettingsLink extends BasePage {
  		Thread.sleep(1000);
  	}
     
-    public void verifyTechnicalAssistance() throws InterruptedException{		
+    public void verifyFreqAskedQues() throws InterruptedException{		
 		
- 	   waitForElementPresent(TechnicalAssistance.toBy());
+ 	   waitForElementPresent(FAQ.toBy());
  		Thread.sleep(1000);
+ 		System.out.println("Frequently Asked Questions is displayed");
  	}
     
     public void verifyVideoAvailability() throws InterruptedException{		
 		
  	   waitForElementPresent(VideoAvailability.toBy());
  		Thread.sleep(1000);
+ 		System.out.println("Video Interpreter Availability is displayed");
  	}
     
-    public void verifyGetAssistance() throws InterruptedException{		
+    public void verifyContactUs() throws InterruptedException{		
 		
- 	   waitForElementPresent(GetAssistance.toBy());
+ 	   waitForElementPresent(contactUs.toBy());
  		Thread.sleep(1000);
+ 		System.out.println("Contact Us is displayed");
  	}
     
     public void verifyCallHistory() throws InterruptedException{		
 		
  	   waitForElementPresent(CallHistory.toBy());
  		Thread.sleep(1000);
+ 		System.out.println("Call History is displayed");
  	}
     
     public void clickCallHistory() throws InterruptedException{		
 		
   	   waitForElementPresent(CallHistory.toBy());
   		Thread.sleep(1000);
+  		System.out.println("Call History is displayed");
   	}
      
     public void clickCallHistoryBackButton() throws InterruptedException{		
 		
    	   waitForElementPresent(CallHistoryBackButton.toBy());
    		Thread.sleep(1000);
+   		System.out.println("Call History Back Button is displayed");
    	}
     
     public void verifyNetworkDiagnostics() throws InterruptedException{		
 		
  	   waitForElementPresent(NetworkDiagnostics.toBy());
  		Thread.sleep(1000);
+ 		System.out.println("Network Diagnostics is displayed");
  	}
+    
     
     public void verifyPlaceTestCall() throws InterruptedException{		
 		
  	   waitForElementPresent(PlaceTestCall.toBy());
  		Thread.sleep(1000);
+ 		System.out.println("Place Test Call is displayed");
  	}
     
-    
-   public void ClickTechnicalAssistance() throws InterruptedException{		  //After we have logged in
+    public void verifyDeviceConfiguration() throws InterruptedException{   //
 		
-		click(TechnicalAssistance.toBy());
-		Thread.sleep(2000);
-		waitForElementPresent(TechnicalAssistanceFirstQues.toBy());
+    	waitForElementPresent(DeviceLogin.toBy());
 		Thread.sleep(1000);
-		
+		System.out.println("Device Configuration is displayed");
 	}
+    
+    
+    public void clickFreqAskedQues() throws InterruptedException{		//After Logged in
+		
+    	click(FAQ.toBy());
+  		Thread.sleep(1000);
+  		System.out.println("Frequently Asked Questions is clicked");
+  	}
+    
    
-   public void verifyTechnicalAssistanceFAQ() throws InterruptedException{		
+   
+   public void verifyFAQs() throws InterruptedException{		
 		
  	   waitForElementPresent(TechnicalAssistanceFAQ.toBy());
  		Thread.sleep(1000);
+ 		System.out.println("FAQ is displayed at the TOP after we click on FAQ link");
  	}
     
-   public void ClickGetAssistance() throws InterruptedException{		   //After we have logged in
+   public void ClickContactUs() throws InterruptedException{		   //After we have logged in
 		
-	    click(GetAssistance.toBy());
+	    click(contactUs.toBy());
 		Thread.sleep(2000);
+		System.out.println("Clicked on Contact Us");
 		waitForElementPresent(GetAssistanceFirstQues.toBy());
 		Thread.sleep(1000);
+		System.out.println("How Do I Contact LanguageLine? Present on next page, when we click on CONTACT US");
 		
 	}
    
@@ -286,8 +305,10 @@ public class HelpAndSettingsLink extends BasePage {
 	 	
   	    click(CloseButton.toBy());
 		Thread.sleep(1000);
+		System.out.println("Click Close link at the TOP");
 	
 	}
+    
     
     
     // When we click on Video Availablity......the next page comes...
@@ -296,31 +317,36 @@ public class HelpAndSettingsLink extends BasePage {
 	 	
    	    click(VideoAvailability.toBy());
 		Thread.sleep(2000);
-	
+		System.out.println("Clicked on Video Interpreter Availability");
 	}
     
     public void verifyVideoAvailability_Language() throws InterruptedException{		
 		
   	   waitForElementPresent(VideoAvailability_Language.toBy());
   		Thread.sleep(1000);
+  	    System.out.println("Language is displayed at the TOP, when clicked on link: Video Interpreter Availability");
+  		
   	}
     
     public void verifyVideoAvailability_LanguageASL() throws InterruptedException{		
 		
   	   waitForElementPresent(VideoAvailability_LanguageASL.toBy());
   		Thread.sleep(1000);
+  		System.out.println("Language ASL is displayed at the TOP");
   	}
     
     public void verifyVideoAvailability_LanguageAlbanian() throws InterruptedException{		
 		
   	   waitForElementPresent(VideoAvailability_LanguageAlbanian.toBy());
   		Thread.sleep(1000);
+  		System.out.println("Language Albanian is displayed at the TOP");
   	}
     
     public void clickVideoAvailability_Close() throws InterruptedException{		
 	 	
    	    click(VideoAvailability_Close.toBy());
 		Thread.sleep(1000);
+		System.out.println("Click Close link at the TOP");
 	
 	}
 
@@ -329,6 +355,7 @@ public class HelpAndSettingsLink extends BasePage {
 	 	
    	    click(PlaceTestCall.toBy());
 		Thread.sleep(1000);
+		System.out.println("Clicked on Place Test Call");
 	
 	}
     
@@ -336,25 +363,25 @@ public class HelpAndSettingsLink extends BasePage {
 		
    	   waitForElementPresent(TestVideoDisplay.toBy());
    		Thread.sleep(1000);
+   		System.out.println("Verify TestVideo text is Displayed ");
    	}
     
     public void verifySmallVideoScreen() throws InterruptedException{		
 		
     	   waitForElementPresent(smallVideoScreen.toBy());
     		Thread.sleep(1000);
+    		System.out.println("Verify Small Video Screen at the Top Corner");
     	}
      
      public void clickVideoHangupButton() throws InterruptedException{		
  	 	
     	    click(videoHangupButton.toBy());
  		Thread.sleep(1000);
+ 		System.out.println("Click on Video Hangup Button to end the PLACE TEST CALL");
  	
  	}
 
-   ///// 
-    
-	
- 
+  
     public void clickHelpAndSettingsLink_BOTTOM() throws InterruptedException{		
 	 	
    	    click(HelpAndSettingsLink_BOTTOM.toBy());

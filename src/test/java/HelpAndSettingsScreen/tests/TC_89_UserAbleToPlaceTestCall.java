@@ -32,22 +32,18 @@ public class TC_89_UserAbleToPlaceTestCall extends BaseTest{
 		
 		}		
 		
-		loginPage.HelpAndSettingsLink_GearIcon();           
+		loginPage.HelpAndSettingsLink_GearIconAfterLOGIN();           
 		
 		HelpAndSettingsLink helpAndSettingsLink = new HelpAndSettingsLink(driver);
 		helpAndSettingsLink.clickPlaceTestCall();
-		System.out.println("Click on Place Test Call");
-		
-		helpAndSettingsLink.clickPlaceTestCall();
-		Thread.sleep(2000);
-		helpAndSettingsLink.verifySmallVideoScreen();
-		System.out.println("Verify Small Video Screen at the Top Corner");
-		helpAndSettingsLink.verifyTestVideoDisplay();
-		System.out.println("Verify TestVideo text is Displayed ");
+	    helpAndSettingsLink.verifyTestVideoDisplay();
 		helpAndSettingsLink.clickVideoHangupButton();
-		System.out.println("Click on Video Hangup Button");
+		
 			
-		ResetDevice resetDevice = new ResetDevice(driver);             //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		//To RESET the DEVICE
+	    Thread.sleep(2000);
+		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
 		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 
