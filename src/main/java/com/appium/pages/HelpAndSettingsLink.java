@@ -171,6 +171,7 @@ public class HelpAndSettingsLink extends BasePage {
 		
     	click(DeviceLogin.toBy());
 		Thread.sleep(1000);
+		System.out.println("Clicked on Device Login");
 	
 	}
     
@@ -185,13 +186,14 @@ public class HelpAndSettingsLink extends BasePage {
 		
 	   waitForElementPresent(LastActivated.toBy());
 		Thread.sleep(1000);
-	
+		System.out.println("Verify last Activated");
 	}
 
     public void verifyActivationCode() throws InterruptedException{		
 		
 	   waitForElementPresent(ActivationCode.toBy());
 		Thread.sleep(1000);
+		System.out.println("Verify Activation Code");
 	}
     
     
@@ -386,20 +388,21 @@ public class HelpAndSettingsLink extends BasePage {
 	 	
    	    click(HelpAndSettingsLink_BOTTOM.toBy());
 		Thread.sleep(1000);
-	
+		System.out.println("Clicked on HelpAndSettingsLink at BOTTOM");
 	}
     
     public void clickHelpAndSettingsLink_TOP() throws InterruptedException{		
 	 	
    	    click(HelpAndSettingsLink_TOP.toBy());
 		Thread.sleep(1000);
-	
+		System.out.println("Clicked on HelpAndSettingsLink at TOP");
 	}
    
     public void verifyHelpAndSettingsTextAtTOP() throws InterruptedException{		
 		
 	   waitForElementPresent(HelpAndSettingsTextAtTOP.toBy());
 	   Thread.sleep(1000);
+	   System.out.println("Help and Settings Header is displayed on TOP. hence, not logged out");
 	}
 
 

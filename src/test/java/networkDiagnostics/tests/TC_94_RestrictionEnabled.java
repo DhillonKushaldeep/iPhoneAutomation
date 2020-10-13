@@ -32,25 +32,24 @@ import com.appium.pages.ResetDevice;
 		} catch (Exception e) { }			
 		
 		
-		LanguageScreen languageScreen = new LanguageScreen(driver);
-		Thread.sleep(2000);
-		languageScreen.click_HelpAndSettingsLink_GearIcon();
+		loginPage.HelpAndSettingsLink_GearIconAfterLOGIN();
 		
 		NetworkDiagnostics networkDiagnostics = new NetworkDiagnostics(driver);
 		networkDiagnostics.click_NetworkDiagnosticsLink();
 		networkDiagnostics.click_RunNetworkDiagnostic();
-		TimeUnit.SECONDS.sleep(2);                          /////
+		TimeUnit.SECONDS.sleep(2);                          
 		networkDiagnostics.videoCallsErrorCodeMessage2A();
 		networkDiagnostics.audioCallsErrorCodeMessage3A();
 		networkDiagnostics.completeFail();
-		System.out.println("Test Complete FAILED is displayed Successfully");  
+		networkDiagnostics.clickClose();
 		
 				
-		ResetDevice resetDevice = new ResetDevice(driver); //Device Login --> Reset Device --> Reset/Cancel --> Reset 
-		resetDevice.clickBack();
-		resetDevice.DeviceLoginresetDeviceApp();
+		//To RESET the DEVICE
+	    Thread.sleep(2000);
+		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
+		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
-
 	}
 
 }

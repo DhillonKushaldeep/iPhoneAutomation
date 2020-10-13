@@ -1,6 +1,7 @@
 package com.appium.pages;
 
 import static com.appium.locator.LanguageScreenUI.*;
+import static com.appium.locator.LoginUI.CloseButton;
 import static com.appium.locator.HelpAndSettingsLinkUI.*;
 import static com.appium.locator.NetworkDiagnosticsUI.*;
 import static com.appium.locator.ResetDeviceUI.*;
@@ -20,6 +21,7 @@ public class NetworkDiagnostics extends BasePage {
 		
     	click(NetworkDiagnosticsLink.toBy());
 		Thread.sleep(1000);
+		System.out.println("Clicked on Network Diagnostics Link");
 	
 	}
 	
@@ -27,6 +29,7 @@ public class NetworkDiagnostics extends BasePage {
 		
     	click(RunNetworkDiagnostic.toBy());
 		Thread.sleep(1000);
+		System.out.println("Clicked on Run Network Diagnostic Link");
 	
 	}
 
@@ -34,12 +37,15 @@ public class NetworkDiagnostics extends BasePage {
 		
 	   waitForElementPresent(GreenCheckAPIConnectivity.toBy());
 	   Thread.sleep(1000);
+	   System.out.println("Green checkmark for API Connectivity is displayed Successfully");
+	   
 	   waitForElementPresent(GreenCheckVideoCalls.toBy());
 	   Thread.sleep(1000);
+	   System.out.println("Green checkmark for Video Calls is displayed Successfully");
+	   
 		waitForElementPresent(GreenCheckAudioCalls.toBy());
 		Thread.sleep(1000);
-		waitForElementPresent(Complete_GreenLabel.toBy());
-		Thread.sleep(1000);
+		System.out.println("Green checkmark for Audio Calls is displayed Successfully");
 	
 	}
 
@@ -47,10 +53,11 @@ public class NetworkDiagnostics extends BasePage {
 		
 	   waitForElementPresent(TestSkippedVideoCalls.toBy());
 	   Thread.sleep(1000);
+	   System.out.println("Test Skipped for Video Calls is displayed Successfully");
+	   
 	   waitForElementPresent(TestSkippedAudioCalls.toBy());
 	   Thread.sleep(1000);
-		waitForElementPresent(TestStopped_RedLabel.toBy());
-		Thread.sleep(1000);
+	   System.out.println("Test Skipped for Audio Calls is displayed Successfully");
 	
 	}
    
@@ -58,6 +65,7 @@ public class NetworkDiagnostics extends BasePage {
 		
 	   waitForElementPresent(VideoCalls_ErrorCodeMessage2A.toBy());
 	   Thread.sleep(1000);
+	   System.out.println("Failed, Error Code: 2A is displayed Successfully"); 
 	
 	}
    
@@ -65,6 +73,7 @@ public class NetworkDiagnostics extends BasePage {
 		
 	   waitForElementPresent(AudioCalls_ErrorCodeMessage3A.toBy());
 	   Thread.sleep(1000);
+	   System.out.println("Failed, Error Code: 3A is displayed Successfully"); 
 	
 	}
    
@@ -73,6 +82,7 @@ public class NetworkDiagnostics extends BasePage {
 		
 	   waitForElementPresent(Complete_Fail.toBy());
 	   Thread.sleep(1000);
+	   System.out.println("Test Complete FAILED is displayed Successfully"); 
 	
 	}
     
@@ -80,12 +90,19 @@ public class NetworkDiagnostics extends BasePage {
 		
    	    click(StopTest.toBy());
 		Thread.sleep(1000);
+		System.out.println("Clicked on STOP TEST");
 	
 	}
 
 
 
-
+   public void clickClose() throws InterruptedException{		//At Top
+	 	
+ 	    click(Close.toBy());
+		Thread.sleep(1000);
+		System.out.println("Click Close link at the TOP");
+	
+	}
 
 
 

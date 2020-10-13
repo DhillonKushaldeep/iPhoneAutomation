@@ -35,22 +35,22 @@ public class TC_92_NetworkDiagnostics_AfterAuthentication extends BaseTest{
 		
 		}			
 		
-		
-		LanguageScreen languageScreen = new LanguageScreen(driver);
-		Thread.sleep(2000);
-		languageScreen.click_HelpAndSettingsLink_GearIcon();
+		loginPage.HelpAndSettingsLink_GearIconAfterLOGIN();
 		
 		NetworkDiagnostics networkDiagnostics = new NetworkDiagnostics(driver);
 		networkDiagnostics.click_NetworkDiagnosticsLink();
 		networkDiagnostics.click_RunNetworkDiagnostic();
+		System.out.println("Waiting for 30 seconds........");
 		TimeUnit.SECONDS.sleep(30);
-		networkDiagnostics.verifyGreenCheckmark();
-		System.out.println("Test Complete is displayed Successfully");
 		
-				
-		ResetDevice resetDevice = new ResetDevice(driver); //Device Login --> Reset Device --> Reset/Cancel --> Reset 
-		resetDevice.clickBack();
-		resetDevice.DeviceLoginresetDeviceApp();
+		networkDiagnostics.verifyGreenCheckmark();
+		networkDiagnostics.clickClose();
+		
+		//To RESET the DEVICE
+	    Thread.sleep(2000);
+		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
+		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 
 	}

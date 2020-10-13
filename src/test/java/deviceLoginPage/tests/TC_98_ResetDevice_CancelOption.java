@@ -33,24 +33,27 @@ public class TC_98_ResetDevice_CancelOption extends BaseTest{
 		}	
 		
 		LoginPage loginPage1 = new LoginPage(driver);
-		loginPage1.HelpAndSettingsLink_GearIcon();
+		loginPage1.HelpAndSettingsLink_GearIconAfterLOGIN();
 		
 		
 		HelpAndSettingsLink  helpAndSettingsLink = new HelpAndSettingsLink(driver);
 		helpAndSettingsLink.click_DeviceLogin();
 		Thread.sleep(2000);
         
-				
 		ResetDevice resetDevice = new ResetDevice(driver);              //Reset Device --> Reset/Cancel --> Cancel 
-		resetDevice.resetDevice_clickCancel();
+		resetDevice.resetDevice_changeCode();
 		Thread.sleep(2000);
+		resetDevice.resetDevice_clickCancel();
 		
 		HelpAndSettingsLink  helpAndSettingsLink1 = new HelpAndSettingsLink(driver);
-		helpAndSettingsLink1.verifyHelpAndSettingsTextAtTOP();
-		System.out.println("Help and Settings Header is displayed on TOP. hence, not logged out");
+		helpAndSettingsLink1.clickHelpAndSettingsLink_TOP();
+        
 		
-		ResetDevice resetDevice1 = new ResetDevice(driver);              //Reset Device --> Reset/Cancel --> Reset 
-		resetDevice1.resetDevice_clickReset();
+		//To RESET the DEVICE
+	    Thread.sleep(2000);
+		ResetDevice resetDevice1 = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice1.DeviceLoginresetDeviceApp();   //click on the Device configuration link
+		resetDevice1.resetDeviceApp();
 		Thread.sleep(2000);
 		
 	}

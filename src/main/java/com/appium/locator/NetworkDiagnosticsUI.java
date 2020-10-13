@@ -18,9 +18,9 @@ import org.openqa.selenium.By;
 		VideoCalls(By.xpath("//XCUIElementTypeStaticText[@name=\"Video Calls\"]")),
 		AudioCalls(By.xpath("//XCUIElementTypeStaticText[@name=\"Audio Calls\"]")),
 		
-		GreenCheckAPIConnectivity(By.xpath("//XCUIElementTypeStaticText[@name=\"assessAPI\"]")),
-		GreenCheckVideoCalls(By.xpath("//XCUIElementTypeStaticText[@name=\"assessVideo\"]")),
-		GreenCheckAudioCalls(By.xpath("//XCUIElementTypeStaticText[@name=\"assessAudio\"]")),
+		GreenCheckAPIConnectivity(By.xpath("//*[@name=\"assessAPI\"]")),
+		GreenCheckVideoCalls(By.xpath("//*[@name=\"assessVideo\"]")),
+		GreenCheckAudioCalls(By.xpath("//*[@name=\"assessAudio\"]")),
 		Complete_GreenLabel(By.xpath("//XCUIElementTypeStaticText[@name=\"completeLabel\"]")),
 		
 		TestSkippedVideoCalls(By.xpath("(//XCUIElementTypeStaticText[@name=\"Test Skipped\"])[1]")),
@@ -32,7 +32,9 @@ import org.openqa.selenium.By;
 		Complete_Fail(By.xpath("")),
 		
 		StopTest(By.xpath("//XCUIElementTypeButton[@name=\"stopTest\"]")),
+		Close(By.xpath("//XCUIElementTypeOther[@name=\"backButton\"]")),
 		RunNetworkDiagnostic(By.xpath("//XCUIElementTypeButton[@name=\"runDiagnostics\"]"));
+		
 
 	
 

@@ -35,8 +35,7 @@ public class TC_95_VerifyAuthenticationDetails extends BaseTest{
 		}		
 		
 		LoginPage loginPage1 = new LoginPage(driver);
-		loginPage1.HelpAndSettingsLink_GearIcon();
-		
+		loginPage1.HelpAndSettingsLink_GearIconAfterLOGIN();
 		
 		HelpAndSettingsLink  helpAndSettingsLink = new HelpAndSettingsLink(driver);
 		helpAndSettingsLink.click_DeviceLogin();
@@ -45,16 +44,18 @@ public class TC_95_VerifyAuthenticationDetails extends BaseTest{
 		helpAndSettingsLink.verifyLastActivated();
 		Thread.sleep(1000);
 		
-        MobileElement element = (MobileElement) driver.findElementByAccessibilityId("lastActivated");
-		String message = element.getText();
-		System.out.println(message);
-		
 		MobileElement element1 = (MobileElement) driver.findElementByAccessibilityId("activationCode");
 		String message1 = element1.getText();
-		System.out.println(message1);
+		System.out.println("Authentication Code:  " + message1);
+		
+		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("lastActivated");
+		String message = element.getText();
+		System.out.println("Activated on:  " + message);
 				
-		ResetDevice resetDevice = new ResetDevice(driver); //Device Login --> Reset Device --> Reset/Cancel --> Reset 
-		resetDevice.resetDevice_clickReset();
+		//To RESET the DEVICE
+	    Thread.sleep(2000);
+		ResetDevice resetDevice = new ResetDevice(driver);   //Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 		
 	}

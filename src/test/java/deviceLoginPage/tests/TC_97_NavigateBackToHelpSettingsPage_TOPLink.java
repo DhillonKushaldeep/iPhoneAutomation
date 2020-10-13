@@ -33,18 +33,20 @@ public class TC_97_NavigateBackToHelpSettingsPage_TOPLink extends BaseTest{
 		}	
 		
 		LoginPage loginPage1 = new LoginPage(driver);
-		loginPage1.HelpAndSettingsLink_GearIcon();
+		loginPage1.HelpAndSettingsLink_GearIconAfterLOGIN();
 		
 		
 		HelpAndSettingsLink  helpAndSettingsLink = new HelpAndSettingsLink(driver);
 		helpAndSettingsLink.click_DeviceLogin();
 		Thread.sleep(2000);
 		helpAndSettingsLink.clickHelpAndSettingsLink_TOP();
-		helpAndSettingsLink.verifyHelpAndSettingsTextAtTOP();
         
 				
-		ResetDevice resetDevice = new ResetDevice(driver);              //Device Login --> Reset Device --> Reset/Cancel --> Reset 
-		resetDevice.resetDevice_clickReset();
+		//To RESET the DEVICE
+	    Thread.sleep(2000);
+		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
+		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 
 	}

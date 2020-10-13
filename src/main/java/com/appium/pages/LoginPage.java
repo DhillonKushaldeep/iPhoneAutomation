@@ -72,6 +72,7 @@ public class LoginPage extends BasePage {
 		waitForElementPresent(DeviceName.toBy());
 		waitForElementPresent(ActivateDevice.toBy());
 		Thread.sleep(1000);
+		System.out.println("Auth code, Device name, Activate Device is displayed. Hence, we logged out successfully");
 	}
 
 	public void testMode_ON() throws InterruptedException{
@@ -164,12 +165,13 @@ public class LoginPage extends BasePage {
 	
 	}
 	
-   public void verifyGetAssistance() throws InterruptedException{        
-		
-    	waitForElementPresent(GetAssistance.toBy());		    
-		Thread.sleep(1000);
-					
-	}
+	/*
+	 * public void verifyGetAssistance() throws InterruptedException{
+	 * 
+	 * waitForElementPresent(GetAssistance.toBy()); Thread.sleep(1000);
+	 * 
+	 * }
+	 */
    
    public void verifyVersion() throws InterruptedException{        
 		
@@ -202,17 +204,14 @@ public class LoginPage extends BasePage {
 		click(BackButton.toBy());
 	}
    
-   public void GetAssistance_click() throws InterruptedException{		
-		
-	    click(GetAssistance.toBy());
-		Thread.sleep(2000);
-		waitForElementPresent(GetAssistanceFirstQues.toBy());
-		Thread.sleep(1000);
-		Thread.sleep(1000);
-		click(CloseButton.toBy());
-		Thread.sleep(1000);
-		click(BackButton.toBy());
-	}
+	/*
+	 * public void GetAssistance_click() throws InterruptedException{
+	 * 
+	 * click(GetAssistance.toBy()); Thread.sleep(2000);
+	 * waitForElementPresent(GetAssistanceFirstQues.toBy()); Thread.sleep(1000);
+	 * Thread.sleep(1000); click(CloseButton.toBy()); Thread.sleep(1000);
+	 * click(BackButton.toBy()); }
+	 */
    
    public void clickBack() throws InterruptedException{        //new
 		

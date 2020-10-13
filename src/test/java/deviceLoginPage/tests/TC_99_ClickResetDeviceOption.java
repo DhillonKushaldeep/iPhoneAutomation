@@ -33,20 +33,17 @@ public class TC_99_ClickResetDeviceOption extends BaseTest{
 		}	
 		
 		LoginPage loginPage1 = new LoginPage(driver);
-		loginPage1.HelpAndSettingsLink_GearIcon();
+		loginPage1.HelpAndSettingsLink_GearIconAfterLOGIN();
 		
-		
-		HelpAndSettingsLink  helpAndSettingsLink = new HelpAndSettingsLink(driver);
-		helpAndSettingsLink.click_DeviceLogin();
-		Thread.sleep(2000);
-		
-		
-		ResetDevice resetDevice1 = new ResetDevice(driver);              //Reset Device --> Reset/Cancel --> Reset 
-		resetDevice1.resetDevice_clickReset();
+		//To RESET the DEVICE
+	    Thread.sleep(2000);
+		ResetDevice resetDevice1 = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice1.DeviceLoginresetDeviceApp();             //click on the Device configuration link
+		resetDevice1.resetDeviceApp();
 		Thread.sleep(2000);
 		
 		loginPage1.verifyLoginInfoPresent();
-		System.out.println("Auth code, Device name, Activate Device is displayed. Hence, we logged out successfully");
+		
 	}
 
 }

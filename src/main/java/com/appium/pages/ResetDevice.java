@@ -45,6 +45,7 @@ public class ResetDevice extends BasePage {
 		
 		click(ChangeCode.toBy());
 		Thread.sleep(1000);
+		System.out.println("Clicked on CHANGE CODE");
 		
 	}
     
@@ -57,10 +58,11 @@ public class ResetDevice extends BasePage {
    
    public void resetDevice_clickCancel() throws InterruptedException{	
 		
-		click(DeviceConfigLink.toBy());
-		Thread.sleep(1000);
+		//click(DeviceConfigLink.toBy());
+		//Thread.sleep(1000);
 		click(ResetDeviceActivation_CANCEL.toBy());
 		Thread.sleep(1000);
+		System.out.println("Clicked on CANCEL");
 		
 	}
     

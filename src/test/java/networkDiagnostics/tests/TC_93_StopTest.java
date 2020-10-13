@@ -35,10 +35,7 @@ import com.appium.pages.ResetDevice;
 		
 		}			
 		
-		
-		LanguageScreen languageScreen = new LanguageScreen(driver);
-		Thread.sleep(2000);
-		languageScreen.click_HelpAndSettingsLink_GearIcon();
+		loginPage.HelpAndSettingsLink_GearIconAfterLOGIN();
 		
 		NetworkDiagnostics networkDiagnostics = new NetworkDiagnostics(driver);
 		networkDiagnostics.click_NetworkDiagnosticsLink();
@@ -46,12 +43,13 @@ import com.appium.pages.ResetDevice;
 		networkDiagnostics.click_StopTest();
 		TimeUnit.SECONDS.sleep(2);
 		networkDiagnostics.verifyTestSkipped();
-		System.out.println("Test Stopped is displayed Successfully");
+		networkDiagnostics.clickClose();
 		
-				
-		ResetDevice resetDevice = new ResetDevice(driver); //Device Login --> Reset Device --> Reset/Cancel --> Reset 
-		resetDevice.clickBack();
-		resetDevice.DeviceLoginresetDeviceApp();
+		//To RESET the DEVICE
+	    Thread.sleep(2000);
+		ResetDevice resetDevice = new ResetDevice(driver);   //Device Login --> Reset Device --> Reset/Cancel --> Reset 
+		resetDevice.DeviceLoginresetDeviceApp();   //click on the Device configuration link
+		resetDevice.resetDeviceApp();
 		Thread.sleep(2000);
 
 	}
